@@ -89,6 +89,21 @@ hr {
     font-size: 20px;
     color: #727272; }
 
+.grid {
+  display: flex;
+  align-items: stretch;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-flow: row wrap; }
+  @media screen and (max-width: 600px) {
+    .grid {
+      flex-direction: column; } }
+  .grid .block {
+    flex: 1; }
+    @media screen and (min-width: 600px) {
+      .grid .block {
+        max-width: 40%; } }
+
 .subblock {
   margin: 2px 1px 2px 1px;
   padding: 15px 15px 15px 15px;

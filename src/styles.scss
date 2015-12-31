@@ -8,6 +8,8 @@ $divider_color: #B6B6B6;
 $primary_text: #212121;
 $secondary_text: #727272;
 
+$break_small: 600px;
+
 body,html {
 	padding: 0;
 	margin: 0;
@@ -117,6 +119,24 @@ hr {
 	p {
 		font-size: 20px;
 		color: $secondary_text;
+	}
+}
+
+.grid {
+	display: flex;
+	align-items: stretch;
+	align-content: space-between;
+	justify-content: space-around;
+	flex-flow: row wrap;
+
+  	@media screen and (max-width: $break_small) {
+  		flex-direction: column;
+  	}
+	.block {
+		flex: 1;
+  		@media screen and (min-width: $break_small) {
+			max-width: 40%;
+		}
 	}
 }
 .subblock {
