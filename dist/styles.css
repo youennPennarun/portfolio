@@ -92,7 +92,6 @@ hr {
 .grid {
   display: flex;
   align-items: stretch;
-  align-content: space-between;
   justify-content: space-around;
   flex-flow: row wrap; }
   @media screen and (max-width: 600px) {
@@ -100,9 +99,21 @@ hr {
       flex-direction: column; } }
   .grid .block {
     flex: 1; }
+    .grid .block.no-padding {
+      padding: 0; }
+    .grid .block.clickable {
+      flex-grow: 1; }
+    .grid .block.clickable:hover {
+      flex-grow: 25;
+      cursor: pointer;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 12px 12px rgba(0, 0, 0, 0.23); }
     @media screen and (min-width: 600px) {
       .grid .block {
-        max-width: 40%; } }
+        max-width: 30%; } }
+    .grid .block img {
+      margin: 0;
+      width: 100%;
+      height: auto; }
 
 .subblock {
   margin: 2px 1px 2px 1px;

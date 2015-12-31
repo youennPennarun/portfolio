@@ -125,7 +125,6 @@ hr {
 .grid {
 	display: flex;
 	align-items: stretch;
-	align-content: space-between;
 	justify-content: space-around;
 	flex-flow: row wrap;
 
@@ -134,8 +133,24 @@ hr {
   	}
 	.block {
 		flex: 1;
+		&.no-padding {
+			padding: 0;
+		}
+		&.clickable {
+			flex-grow: 1;
+		}
+		&.clickable:hover {
+			flex-grow: 25;
+			cursor: pointer;
+	  		box-shadow: 0 20px 30px rgba(0,0,0,0.10), 0 12px 12px rgba(0,0,0,0.23);
+		}
   		@media screen and (min-width: $break_small) {
-			max-width: 40%;
+			max-width: 30%;
+		}
+		img {
+			margin:0;
+			width: 100%;
+			height: auto;
 		}
 	}
 }
