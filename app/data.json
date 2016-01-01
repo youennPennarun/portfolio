@@ -1,0 +1,41 @@
+{
+	"header": {
+		"cover": "http://youenn.pennarun.com/public/assets/img/logofinal.png",
+		"title": "Youenn PENNARUN",
+		"subtitle": "Etudiant en Licence 3 Ingénierie Informatique"
+	},
+	"about": {
+		"title": "Hello there!",
+		"content": "Bonjour, je suis Youenn Pennarun. Je suis étudiant en Licence 3 informatique option Ingénierie Informatique. Autonome, curieux et autodidacte, je cherche toujours à améliorer mes techniques de programmation<br/><br/>Je suis aussi un grand fan de musique de tout genre, du rock au jazz en passant par le hip-hop et la musique électronique."
+	},
+	"studies": [
+		{
+			"title": "M1",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
+		},
+		{
+			"title": "L3",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
+		}
+	],
+	"professional_experiences": [
+		{
+			"title": "Node JS...",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
+		},
+		{
+			"title": "Irlelande",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
+		}
+	],
+	"projects": [
+		{
+			"name": "arduino light switcher",
+			"cover": "http://youenn.pennarun.com/public/assets/img/arduino-light/main%20screen.png"
+		},
+		{
+			"name": "homyPi",
+			"cover": "http://youenn.pennarun.com/public/assets/img/hapi/alarms.PNG"
+		}
+	]
+}
