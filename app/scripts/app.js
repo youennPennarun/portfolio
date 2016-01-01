@@ -2,7 +2,7 @@
 var React = window.React = require('react'),
     ReactDOM = require("react-dom"),
     mountNode = document.getElementById("app");
-    
+
 import Header from "./ui/Header";
 import About from "./ui/About";
 import Studies from "./ui/Studies";
