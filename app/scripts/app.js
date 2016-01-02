@@ -3,11 +3,13 @@ var React = window.React = require('react'),
     ReactDOM = require("react-dom"),
     mountNode = document.getElementById("app");
 
+import Menu from "./ui/Menu";
 import Header from "./ui/Header";
 import About from "./ui/About";
 import Studies from "./ui/Studies";
 import ProfessionalExp from "./ui/ProfessionalExp";
 import Projects from "./ui/Projects";
+
 
 var data = require("../data.json");
 
@@ -15,6 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Menu />
         <Header {...data.header} />
         <About about={data.about}/>
         <Studies studies={data.studies} />

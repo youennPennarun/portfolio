@@ -30,12 +30,12 @@
 	],
 	"projects": [
 		{
-			"name": "arduino light switcher",
-			"cover": "http://youenn.pennarun.com/public/assets/img/arduino-light/main%20screen.png"
-		},
-		{
 			"name": "homyPi",
 			"cover": "http://youenn.pennarun.com/public/assets/img/hapi/alarms.PNG"
+		},
+		{
+			"name": "arduino light switcher",
+			"cover": "http://youenn.pennarun.com/public/assets/img/arduino-light/main%20screen.png"
 		}
 	]
 }
