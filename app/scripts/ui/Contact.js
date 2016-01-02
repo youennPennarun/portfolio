@@ -1,5 +1,6 @@
 "use strict";
 import {Component} from "react";
+import {Element} from 'react-scroll'; 
 
 class Contact extends Component {
 	constructor(props) {
@@ -9,7 +10,11 @@ class Contact extends Component {
 		}
 	}
 	render() {
-		
+		return (
+		<Element name="contact" >
+
+		</Element>
+		);
 	}
 
 

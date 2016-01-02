@@ -1,19 +1,20 @@
 "use strict";
 import {Component} from "react";
+import {Element} from 'react-scroll'; 
 import ProfessionalExpItem from "./ProfessionalExpItem"
 
 class ProfessionalExp extends Component {
 	render() {
 		let {experiences} = this.props;
 		return (
-			<div className="block">
+			<Element name="professional-exp" className="block">
 				<h1 className="main">Experiences</h1>
 				{
 				experiences.map(
 					experience => (<ProfessionalExpItem key={experience.title} {...experience} />)
 				)
 			}	
-			</div>
+			</Element>
 
 		)
 	}
