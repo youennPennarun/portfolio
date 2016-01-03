@@ -27,7 +27,7 @@ class ProjectDetail extends Component {
 		if (!ignoreCover && images.indexOf(cover) === -1) 
 			images.push(cover);
 		return (
-			<div className={(!active)? "project-detail active": "project-detail"}>
+			<div className={(active)? "project-detail active": "project-detail"}>
 				<span className="close" onClick={closeDetails}>
 					
 				</span>

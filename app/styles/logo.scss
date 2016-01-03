@@ -112,7 +112,10 @@ $loaded_anim_duration: 3s;
 	0% {
 		transform: rotateY(80deg);
 	}
-	95% {
+	60% {
+		transform: rotateY(-10deg);
+	}
+	90% {
 		transform: rotateY(-30deg);
 	}
 	100% {
@@ -121,13 +124,13 @@ $loaded_anim_duration: 3s;
 }
 @keyframes m3 {
 	0% {
-		transform: scaleX(0);
+		transform: scaleY(0);
 	}
 	80% {
-		transform: scaleX(1.2);
+		transform: scaleY(1.1);
 	}
 	100% {
-		transform: scaleX(1);
+		transform: scaleY(1);
 	}
 }
 @keyframes r1 {
