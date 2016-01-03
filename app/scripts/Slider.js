@@ -8,11 +8,21 @@ const styles = {
 		height: "300px",
 		"alignItems": "center"
 	},
-	button: {
-		flex:1
+	buttonLeft: {
+		flex:1,
+		fontSize: "24px",
+		"float": "right",
+		"paddingRight": "10px",
+    	"textAlign": "right"
+	},
+	buttonRight: {
+		flex:1,
+		fontSize: "24px",
+		"paddingLeft": "10px",
+    	"textAlign": "left"
 	},
 	slider: {
-		flex:3,
+		flex:6,
 		display: "flex",
 		"flexDirection": "row",
 		overflow: "hidden",
@@ -20,12 +30,14 @@ const styles = {
 	},
 	child: {
 		flex: 0,
+		opacity: 0,
 		maxWidth: "100%",
 		width: "100%",
-		transition: "flex 2s ease"
+		transition: "flex 2s ease, opacity 1s ease"
 	},
 	current: {
-		flex: 1
+		flex: 1,
+		opacity: 1,
 	}
 }
 
@@ -57,13 +69,16 @@ class Slider extends Component {
 		console.log(this.props.children, this.state.current);
 		return (
 			<div style={styles.container}>
-				<button style={styles.button} onClick={this.previous} >prev</button>
+				<i style={styles.buttonLeft} onClick={this.previous} className="fa fa-arrow-circle-left"></i>
 				<div style={styles.slider}>
 					{
 						children.map((c, key) => {
-							let style = Object.assign({}, styles.child);
-							if (this.state.current === key)
-								style.flex = 1;
+							let style;
+							if (this.state.current === key) {
+								style = Object.assign({}, styles.child, styles.current);
+							} else {
+								style = Object.assign({}, styles.child);
+							}
 							return (
 								<div style={style}>
 									{c}
@@ -72,7 +87,8 @@ class Slider extends Component {
 						})
 					}
 				</div>
-				<button style={styles.button} onClick={this.next}>next</button>
+				<i style={styles.buttonRight} onClick={this.next} className="fa fa-arrow-circle-right"></i>
+				
 			</div>
 		)
 	}
