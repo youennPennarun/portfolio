@@ -10,6 +10,7 @@ class About extends React.Component {
 				<hr/>
 				<p dangerouslySetInnerHTML={{__html: about.content}}>
 				</p>
+				
 			</Element>
 		);
 	}

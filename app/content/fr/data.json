@@ -52,11 +52,32 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"cover": "http://youenn.pennarun.com/public/assets/img/hapi/alarms.PNG"
+			"cover": "http://youenn.pennarun.com/public/assets/img/hapi/alarms.PNG",
+			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présent dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire a l'utilisateur.",
+			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"],
+			"links": [
+				{"name": "server", "url": "to do"}
+			]
 		},
 		{
 			"name": "arduino light switcher",
-			"cover": "http://youenn.pennarun.com/public/assets/img/arduino-light/main%20screen.png"
+			"cover": "http://youenn.pennarun.com/public/assets/img/arduino-light/main%20screen.png",
+			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce a un serveur web et une carte Arduino",
+			"technos": ["NodeJs", "Socket.io", "MongoDB", "Java", "Arduino"],
+			"links": [
+				{
+					"name": "Server",
+					"url": "https://github.com/youennPennarun/Arduino_light_switcher_server"
+				},
+				{
+					"name": "Driver",
+					"url": "https://github.com/youennPennarun/Arduino_light_switcher_Driver"
+				},
+				{
+					"name": "Control panel",
+					"url": "https://github.com/youennPennarun/Arduino_light_switcher_Admin_app"
+				}
+			]
 		}
 	]
 }
