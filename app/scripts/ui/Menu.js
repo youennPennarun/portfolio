@@ -3,6 +3,7 @@ import {Component} from "react";
 import MenuItem from "./MenuItem";
 import {Events} from "react-scroll";
 import LanguageSelection from "./LanguageSelection";
+import Translate from "../Translate";
 
 
 class Menu extends Component {
@@ -12,9 +13,21 @@ class Menu extends Component {
 			showMenu: false,
 			animated: false,
 			current: "about",
+			menuItems: {},
 			underlineStyle: {
 				width: 0
 			}
+		}
+
+		this.translate = () => {
+			let menuItems = {
+				about: Translate.translate("menu.about"),
+				education: Translate.translate("menu.education"),
+				experience: Translate.translate("menu.experience"),
+				portfolio: Translate.translate("menu.portfolio"),
+				contact: Translate.translate("menu.contact"),
+			};
+			this.setState({menuItems});
 		}
 	}
 	overItem(elem) {
@@ -30,6 +43,11 @@ class Menu extends Component {
 		let current = document.querySelector("#top-menu .current");
 		if (current)
 			this.overItem(current);
+		this.translate();
+		Translate.addListener(this.translate);
+	}
+	componentWillUnmout() {
+		Translate.removeListener(this.translate);
 	}
 	toogleMenu() {
 		this.setState({showMenu: !this.state.showMenu, animated: true});
@@ -40,7 +58,8 @@ class Menu extends Component {
 			underlineStyle,
 			showMenu,
 			animated,
-			current
+			current,
+			menuItems
 		} = this.state;
 		let layerClass = "show-menu__layer";
 		if (animated) {
@@ -53,11 +72,12 @@ class Menu extends Component {
 		return (
 			<div id="top-menu">
 				<div className={(showMenu)? "items active": "items"}>
-					<MenuItem text="About me" color="#B71C1C" linkTo="about" current={current} onMouseOver={elem => this.overItem(elem)} />
-					<MenuItem text="Education" color="#2196F3" linkTo="education" current={current} onMouseOver={elem => this.overItem(elem)} />
-					<MenuItem text="Experiences" color="#3F51B5" linkTo="professional-exp" current={current} onMouseOver={elem => this.overItem(elem)} />
-					<MenuItem text="Portfolio" color="#00BCD4" linkTo="projects" current={current} onMouseOver={elem => this.overItem(elem)} />
-					<MenuItem text="Contact" color="#FF5722" linkTo="contact" current={current} onMouseOver={elem => this.overItem(elem)} />
+					
+					<MenuItem text={menuItems.about} color="#B71C1C" linkTo="about" current={current} onMouseOver={elem => this.overItem(elem)} />
+					<MenuItem text={menuItems.education} color="#2196F3" linkTo="education" current={current} onMouseOver={elem => this.overItem(elem)} />
+					<MenuItem text={menuItems.experience} color="#3F51B5" linkTo="professional-exp" current={current} onMouseOver={elem => this.overItem(elem)} />
+					<MenuItem text={menuItems.portfolio} color="#00BCD4" linkTo="projects" current={current} onMouseOver={elem => this.overItem(elem)} />
+					<MenuItem text={menuItems.contact} color="#FF5722" linkTo="contact" current={current} onMouseOver={elem => this.overItem(elem)} />
 					<LanguageSelection />
 				</div>
 				<div style={underlineStyle} className="underline"></div>

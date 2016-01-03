@@ -55,7 +55,7 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"cover": "http://youenn.pennarun.com/public/assets/img/hapi/alarms.PNG",
+			"cover": "/images/hapi/alarms.png",
 			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présent dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire a l'utilisateur.",
 			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"],
 			"links": [
@@ -64,7 +64,7 @@
 		},
 		{
 			"name": "arduino light switcher",
-			"cover": "http://youenn.pennarun.com/public/assets/img/arduino-light/main%20screen.png",
+			"cover": "/images/arduino-light/main screen.png",
 			"description": "This project is my Bachelor Degree project. The project goal was to turn on and off a light remotely with and Arduino card for the hardware and a web server",
 			"technos": ["NodeJs", "Socket.io", "MongoDB", "Java", "Arduino"],
 			"links": [

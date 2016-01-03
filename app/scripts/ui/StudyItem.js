@@ -10,11 +10,7 @@ class StudyItem extends React.Component {
       <div className="sub-block level-2 study">
           <h1>{title}</h1>
           <div className="info" >
-            {/*<p className="location">{location}</p>
-            <p className="dates"> - from {start} to {end}</p>*/}
-            <p>
-              <Translate component="p" content="studies.info" location={location} start={start} end={end}/>
-            </p>
+            <Translate component="p" content="studies.info" location={location} start={start} end={end}/>
           </div>
           
             {
@@ -24,9 +20,9 @@ class StudyItem extends React.Component {
             }
             
             {
-              content.map(item => {
+              content.map((item, key) => {
                 return (
-                  <p className="item">
+                  <p key={key} className="item">
                     {"→ " + item}
                   </p>
                 )

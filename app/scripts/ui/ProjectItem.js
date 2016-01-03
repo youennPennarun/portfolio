@@ -11,9 +11,11 @@ class ProjectItem extends Component {
 	}
 	showDetails() {
 		this.setState({showDetails: true});
+		document.querySelector("body").style.overflow = "hidden";
 	}
 	closeDetails() {
 		this.setState({showDetails: false});
+		document.querySelector("body").style.overflow = "auto";
 	}
 	render() {
 		let {cover} = this.props;

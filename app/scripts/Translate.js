@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 
 class Translate extends Component {
 	constructor(props) {
@@ -21,14 +21,9 @@ class Translate extends Component {
 	}
 	render() {
 		let {component, className} = this.props;
-		if (!component) component = "p";
-
-		return (
-			<component className={className}>
-				{this.state.translated}
-            </component>
-
-		)
+		if (!component) component = "p"
+		return React.createElement(component, {className}, this.state.translated);
+		
 	}
 }
 

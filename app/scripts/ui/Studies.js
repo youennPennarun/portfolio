@@ -3,16 +3,17 @@
 var React = require('react');
 import {Element} from 'react-scroll';
 import StudyItem from "./StudyItem";
+import Translate from "../Translate";
 
 class Studies extends React.Component {
   render() {
     let {studies} = this.props;
     return (
       <Element name="education" className="block">
-        <h1 className="main">Etudes</h1>
+        <Translate component="h1" className="main" content="studies.title"/>
         {
           studies.map(
-            study => (<StudyItem key={study.title} { ...study } />)
+            (study, key) => (<StudyItem key={key} { ...study } />)
           )
         }
       </Element>

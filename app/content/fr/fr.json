@@ -1,5 +1,13 @@
 {
+	"menu": {
+		"about": "Présentation",
+		"education": "Études",
+		"experience": "Éxperiences professionnel",
+		"portfolio": "Portfolio",
+		"contact": "Me contacter"
+	},
 	"studies": {
+		"title": "Études",
 		"info": "{location} - de: {start} à: {end}"
 	}
 

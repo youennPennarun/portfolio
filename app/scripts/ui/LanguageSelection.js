@@ -52,7 +52,7 @@ class LanguageSelection extends Component {
 				<div className="languages-list">
 					{languages.map(l => {
 						return (
-							<div className="language"
+							<div key={l.key} className="language"
 							 onClick={() => this.setLanguage(l)}>
 								{l.name}
 							</div>

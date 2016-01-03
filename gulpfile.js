@@ -25,7 +25,9 @@ gulp.task('styles', ['sass', 'moveCss']);
 gulp.task('moveCss',['clean'], function(){
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
-  gulp.src(['./app/styles/**/*.css'], { base: './app/styles/' })
+  gulp.src([
+        './app/styles/**/*.css'
+    ], { base: './app/styles/' })
   .pipe(gulp.dest('dist/styles'));
 });
 
@@ -33,7 +35,7 @@ gulp.task('sass', function() {
     return $.rubySass('./app/styles', {
             style: 'expanded',
             precision: 10,
-            loadPath: ['app/bower_components']
+            loadPath: ["app/bower_components"]
         })
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('dist/styles'))
@@ -103,7 +105,9 @@ gulp.task('fonts', function() {
     
     return gulp.src(require('main-bower-files')({
             filter: '**/*.{eot,svg,ttf,woff,woff2}'
-        }).concat('app/fonts/**/*'))
+        }).concat([
+            'app/fonts/**/*'
+        ]))
         .pipe(gulp.dest('dist/fonts'));
     
 });
@@ -164,7 +168,7 @@ gulp.task('extras', function() {
 });
 
 // Watch
-gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
+gulp.task('watch', ['images', 'html', 'fonts', 'bundle'], function() {
 
     browserSync({
         notify: false,

@@ -2,7 +2,8 @@
   "name": "youenn-pennarun-portfolio",
   "version": "0.0.0",
   "dependencies": {
-    "react-scroll": "^0.35.0"
+    "react-scroll": "^0.35.0",
+    "react-slick": "^0.9.3"
   },
   "devDependencies": {
     "browserify": "latest",

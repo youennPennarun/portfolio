@@ -1,5 +1,6 @@
 @import "animations";
 
+
 $background_white: #f5f5f5;
 
 $dark_primary_color: #512DA8;
@@ -18,7 +19,7 @@ body,html {
     margin: 0;
     height: 100%;
     min-height: 100%;
-    background-color: $background_white; 
+    background-color: $background_white;
 }
 
 hr {
@@ -37,6 +38,28 @@ hr {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 2px 20px #555555;    
+
+    .language-selection {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        .languages-list {
+                position: absolute;
+                margin-left: 10px;
+                display: none;
+                background-color: white;
+                color: black;
+                width: auto;
+        }
+        &.active {
+            .languages-list {
+                display: flex;
+                flex-direction: column;
+            } 
+        }
+    }
 
     @media screen and (min-width: $menu_break_small) {
         .items {
@@ -116,20 +139,11 @@ hr {
                     }
                 }
             }
+
             .language-selection {
-                .languages-list {
-                    margin-left: 10px;
-                    display: none;
-                    background-color: white;
-                    color: black;
-                    width: 25%;
-                }
-                &.active {
-                    .languages-list {
-                        display: flex;
-                        flex-direction: column;
-                    } 
-                }
+                right: 10%;
+                top: 0;
+                transform: none;
             }
             &.active {
                 left:0;
@@ -353,6 +367,8 @@ hr {
 }
 
 .project-detail {
+    color: #2c3e50;
+    overflow: auto;
     z-index: 1000;
     background-color: white;
     width: 100%;
@@ -363,7 +379,31 @@ hr {
     transition: top 0.5s;
     display: flex;
     flex-direction: column;
-
+    padding-bottom: 25px;
+    
+    h1.name {
+        font-size: 3em;
+        font-weight: 700;
+        align-self: center;
+        color: #2c3e50;
+        margin: 50px 0 0 0;
+    }
+    hr.underline {
+        margin-top: 21px;
+        margin-bottom: 21px;
+        border: 0;
+        border-top: 1px solid #ecf0f1;
+    }
+    hr {
+        width: 50%;
+    }
+    a {
+        text-decoration: none;
+    }
+    a, a:hover, a:focus, a:active, a.active {
+        outline: 0;
+        color: #18bc9c;
+    }
     &.active {
         top: 0;
     }
@@ -387,16 +427,49 @@ hr {
             transform: rotate(-90deg);
         }
     }
-    .name {
-        margin-top: 30px;
-        font-size: 35px;
-        color: $primary_color;
-        align-self: center;
+    .project-slider-container {
+        padding-left: 15%;
+        padding-right: 15%;
+
+        .slick-prev:before, .slick-next:before {
+            color: $dark_primary_color;
+        }
+
+        .project-slider {
+            .slider-item{
+                img {     
+                }
+            }
+        }
     }
-    img {
-        margin-top: 30px;
-        width: 75%;
-        height: 50%;
-        align-self: center;
+
+    .description {
+        margin-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .technos {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        strong {
+            color: #2c3e50;
+        }
+
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 25px;
     }
 }
