@@ -60,6 +60,10 @@
 			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"],
 			"links": [
 				{"name": "server", "url": "to do"}
+			],
+			"images": [
+				"/images/hapi/new-alarm.png",
+				"/images/hapi/player.png"
 			]
 		},
 		{
@@ -80,6 +84,12 @@
 					"name": "Control panel",
 					"url": "https://github.com/youennPennarun/Arduino_light_switcher_Admin_app"
 				}
+			],
+			"images": [
+				"/images/arduino-light/HA_Splash.jpg",
+				"/images/arduino-light/light screen.PNG",
+				"/images/arduino-light/main screen.png",
+				"/images/arduino-light/weather.PNG"
 			]
 		}
 	]

@@ -15,22 +15,17 @@ class ProjectDetail extends Component {
 		let {active,
 			closeDetails,
 			cover,
-			slides,
+			images,
 			name,
 			description,
 			technos,
 			links,
 			ignoreCover
 		} = this.props;
-		slides = slides || [];
-		slides.push(cover);
-		slides.push(cover);
-		slides.push(cover);
+		images = images || [];
 
-		slides.push(cover);
-
-		if (!ignoreCover && slides.indexOf(cover) === -1) 
-			slides.push(cover);
+		if (!ignoreCover && images.indexOf(cover) === -1) 
+			images.push(cover);
 		return (
 			<div className={(!active)? "project-detail active": "project-detail"}>
 				<span className="close" onClick={closeDetails}>
@@ -43,9 +38,9 @@ class ProjectDetail extends Component {
 				<div className="project-slider-container">
 		    		<Slider {...sliderSettings}>
 		    			{
-		    				slides.map(function(slide, key) {
+		    				images.map(function(image, key) {
 		    					return(
-		        					<div key={key}><img src={slide} style={{maxWidth: "100%"}} /></div>
+		        					<div key={key}><img src={image} style={{maxWidth: "100%"}} /></div>
 		        				);
 		    				})
 		    			}
