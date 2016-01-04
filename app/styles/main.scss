@@ -379,7 +379,13 @@ hr {
     }
        
 }
-
+#projects {
+    text-align: center;
+    hr {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
 .project-detail {
     color: #2c3e50;
     overflow: auto;

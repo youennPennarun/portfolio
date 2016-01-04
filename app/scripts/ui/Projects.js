@@ -7,12 +7,16 @@ class Projects extends Component {
 	render() {
 		let {projects} = this.props;
 		return (
-			<Element name="projects" className="grid">
-			{
-				projects.map(
-					project => (<ProjectItem key={project.name} {...project} />)
-				)
-			}	
+			<Element name="projects" id="projects">
+				<h1>Projects</h1>
+				<hr/>
+				<div className="grid">
+					{
+						projects.map(
+							project => (<ProjectItem key={project.name} {...project} />)
+						)
+					}
+				</div>
 			</Element>
 		);
 	}
