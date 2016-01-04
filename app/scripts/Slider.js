@@ -39,14 +39,14 @@ const styles = {
 		flex: 1,
 		opacity: 1,
 	}
-}
+};
 
 class Slider extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			current: 0
-		}
+		};
 
 		this.next = () => {
 			console.log(this.state.current, "<", this.props.children.length -1);
@@ -54,12 +54,12 @@ class Slider extends Component {
 				this.state.current < this.props.children.length -1) {
 				this.setState({current: ++this.state.current});
 			}
-		}
+		};
 		this.previous = () => {
 			if (this.state.current > 0) {
 				this.setState({current: --this.state.current});
 			}
-		}
+		};
 	}
 	render() {
 		let {children} = this.props;
@@ -90,7 +90,7 @@ class Slider extends Component {
 				<i style={styles.buttonRight} onClick={this.next} className="fa fa-arrow-circle-right"></i>
 				
 			</div>
-		)
+		);
 	}
 }
 

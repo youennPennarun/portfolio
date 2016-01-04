@@ -1,7 +1,7 @@
 "use strict";
 import {Component} from "react";
-import {Element} from 'react-scroll'; 
-import ProjectItem from "./ProjectItem"
+import {Element} from "react-scroll"; 
+import ProjectItem from "./ProjectItem";
 
 class Projects extends Component {
 	render() {
@@ -14,9 +14,8 @@ class Projects extends Component {
 				)
 			}	
 			</Element>
-
-		)
+		);
 	}
 }
 
-export default Projects
+export default Projects;

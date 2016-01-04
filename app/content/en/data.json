@@ -48,8 +48,11 @@
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
 		},
 		{
-			"title": "Irlelande",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
+			"title": "Internship in web development in irlande",
+			"location": "Institute of Technology Tralee - Irlande",
+			"start": "7 april",
+			"end": "8 june 2014",
+			"description": "Development of a departmental publications management application in PHP."
 		}
 	],
 	"projects": [

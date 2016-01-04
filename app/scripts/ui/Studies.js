@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-var React = require('react');
-import {Element} from 'react-scroll';
+import {Component} from "react";
+import {Element} from "react-scroll";
 import StudyItem from "./StudyItem";
 import Translate from "../Translate";
 
-class Studies extends React.Component {
+class Studies extends Component {
   render() {
     let {studies} = this.props;
     return (
@@ -17,7 +17,7 @@ class Studies extends React.Component {
           )
         }
       </Element>
-      )
+    );
   }
 }
 

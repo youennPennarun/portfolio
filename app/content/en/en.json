@@ -1,13 +1,20 @@
 {
+	"header": {
+		"subtitle": "Student in computer sciences"
+	},
 	"menu": {
 		"about": "About me",
 		"education": "Education",
-		"experience": "Experience",
+		"experience": "Experiences",
 		"portfolio": "Portfolio",
 		"contact": "contact"
 	},
 	"studies": {
 		"title": "Studies",
+		"info": "{location} - from: {start} to: {end}"
+	},
+	"experiences": {
+		"title": "Experiences",
 		"info": "{location} - from: {start} to: {end}"
 	}
 

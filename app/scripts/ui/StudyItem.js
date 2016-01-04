@@ -1,8 +1,8 @@
-'use strict';
-var React = require('react');
+"use strict";
+import {Component} from "react";
 import Translate from "../Translate";
 
-class StudyItem extends React.Component {
+class StudyItem extends Component {
   render() {
     let {title, description, location, start, end, content} = this.props;
     if (!content) content = [];
@@ -25,11 +25,11 @@ class StudyItem extends React.Component {
                   <p key={key} className="item">
                     {"→ " + item}
                   </p>
-                )
+                );
               })
             }
         </div>
-      )
+      );
   }
 }
 

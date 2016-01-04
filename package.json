@@ -2,6 +2,7 @@
   "name": "youenn-pennarun-portfolio",
   "version": "0.0.0",
   "dependencies": {
+    "jshint-stylish": "^2.1.0",
     "react-scroll": "^0.35.0",
     "react-slick": "^0.9.3"
   },
@@ -13,7 +14,7 @@
     "gulp-bower": "0.0.6",
     "gulp-cache": "~0.2.4",
     "gulp-imagemin": "latest",
-    "gulp-jshint": "~1.8.5",
+    "gulp-jshint": "~2.0.0",
     "gulp-load-plugins": "~0.7.0",
     "gulp-ruby-sass": "~1.0.5",
     "browser-sync": "latest",

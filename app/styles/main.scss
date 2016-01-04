@@ -1,5 +1,5 @@
 @import "animations";
-
+@import "fonts.scss";
 
 $background_white: #f5f5f5;
 
@@ -20,6 +20,7 @@ body,html {
     height: 100%;
     min-height: 100%;
     background-color: $background_white;
+    font-family: 'Roboto', sans-serif;
 }
 
 hr {
@@ -358,12 +359,25 @@ hr {
         margin-bottom: 5px;
         p {
             margin:0;
+            font-weight: 100;
         }
     }
     .item {
         margin-top: 2px;
         margin-bottom: 2px;
     }
+}
+
+#experiences { 
+    .info {
+        display: flex;
+        margin-bottom: 5px;
+        p {
+            margin:0;
+            font-weight: 100;
+        }
+    }
+       
 }
 
 .project-detail {
@@ -471,5 +485,25 @@ hr {
         flex-direction: column;
         align-items: center;
         padding-bottom: 25px;
+    }
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    color: white;
+    #aroundWeb {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 25px;
+        background-color: $primary_color;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+    #copyright {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: $dark_primary_color;
+
     }
 }

@@ -1,4 +1,7 @@
 {
+	"header": {
+		"subtitle": "Étudiant en Master 1 Informatique"
+	},
 	"menu": {
 		"about": "Présentation",
 		"education": "Études",
@@ -8,6 +11,10 @@
 	},
 	"studies": {
 		"title": "Études",
+		"info": "{location} - de: {start} à: {end}"
+	},
+	"experiences": {
+		"title": "Éxperiences professionnel",
 		"info": "{location} - de: {start} à: {end}"
 	}
 

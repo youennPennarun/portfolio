@@ -3,15 +3,15 @@ import React, {Component} from "react";
 class Translate extends Component {
 	constructor(props) {
 		super(props);
-		let {content, component, className, ...values} = this.props;
+		let {content, component, className, ...values} = this.props; // jshint ignore:line
 		
 		this.state = {
 			translated: Translate.translate(content, values)
-		}
+		};
 
 		this.updateTranslation = () => {
 			this.setState({translated: Translate.translate(content, values)});
-		}
+		};
 	}
 	componentDidMount() {
 		Translate.addListener(this.updateTranslation);
@@ -21,7 +21,7 @@ class Translate extends Component {
 	}
 	render() {
 		let {component, className} = this.props;
-		if (!component) component = "p"
+		if (!component) component = "p";
 		return React.createElement(component, {className}, this.state.translated);
 		
 	}
@@ -32,6 +32,7 @@ Translate.selectedLanguage = Translate.defaultLanguage;
 Translate.languages = {};
 Translate.listeners = [];
 Translate.registerTranslations = function(key, data) {
+	"use strict";
 	if (!Translate.languages[key]) {
 		Translate.languages[key] = {};
 	}
@@ -48,26 +49,31 @@ Translate.registerTranslations = function(key, data) {
 		Translate.selectedLanguage = uL;
 		notify();
 	}
-	return Translate.languages[key] = Object.assign(Translate.languages[key], data);
+	let result = Translate.languages[key] = Object.assign(Translate.languages[key], data);
+	return result;
 
-}
+};
 Translate.switchLanguage = function(key) {
+	"use strict";
 	if (!Translate.languages[key])
 		throw new Error("unknown language " + key);
 	Translate.selectedLanguage = key;
 	notify();
-}
+};
 Translate.addListener = function(fn) {
+	"use strict";
 	if (typeof fn != "function")
 		throw new Error("not a function");
 	Translate.listeners.push(fn);
-}
+};
 Translate.removeListener = function(fn) {
+	"use strict";
 	let i = Translate.listeners.indexOf(fn);
 	if (i !== -1)
 		Translate.listeners.splice(i, 1);
-}
+};
 Translate.translate = function(key, values = {}) {
+	"use strict";
 	var str = get(key);
 	if (!str) {
 		return "";
@@ -77,18 +83,20 @@ Translate.translate = function(key, values = {}) {
 		str = str.replace(re, values[key]);
 	});
 	return str;
-}
+};
 
 
 function notify() {
+	"use strict";
 	Translate.listeners.forEach(function(fn) {
 		fn();
 	});
 }
 
 function get(key) {
+	"use strict";
 	var description = Translate.languages[Translate.selectedLanguage];
-	return key.split(".").reduce(function(prev, current, index, arr) {
+	return key.split(".").reduce(function(prev, current) {
 		if (!prev) {
 			return null;
 		}

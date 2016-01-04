@@ -10,7 +10,7 @@ const languages = [
 		name: "English",
 		key: "en"
 	}
-]
+];
 
 class LanguageSelection extends Component {
 	constructor(props) {
@@ -18,9 +18,9 @@ class LanguageSelection extends Component {
 		this.state = {
 			showLanguageList: false,
 			selectedLanguage: languages[0]
-		}
+		};
 
-		this.getSelectedLanguage = (init) => {
+		this.getSelectedLanguage = () => {
 			var selected = {};
 			languages.forEach((l) => {
 				if (l.key === Translate.selectedLanguage) {
@@ -29,7 +29,7 @@ class LanguageSelection extends Component {
 				}
 			});
 			return selected;
-		}
+		};
 		if (Translate.selectedLanguage) {
 			this.state.selectedLanguage = this.getSelectedLanguage(true);
 		}
@@ -56,7 +56,7 @@ class LanguageSelection extends Component {
 							 onClick={() => this.setLanguage(l)}>
 								{l.name}
 							</div>
-						)
+						);
 					})}
 				</div>
 			</div>

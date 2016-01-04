@@ -1,5 +1,5 @@
 "use strict";
-import {Component} from "react"
+import {Component} from "react";
 
 const styles = {
 	logo: {
@@ -48,7 +48,7 @@ class Logo extends Component {
 					{/*<line style={styles.red} x1="225" y1="0" x2="225" y2="500" />*/}
 				</svg>
 			</div>
-		)
+		);
 	}
 }
 

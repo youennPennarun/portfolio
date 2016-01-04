@@ -1,7 +1,7 @@
 "use strict";
 import {Component} from "react";
-import {Element} from 'react-scroll'; 
-import ProfessionalExpItem from "./ProfessionalExpItem"
+import {Element} from "react-scroll"; 
+import ProfessionalExpItem from "./ProfessionalExpItem";
 
 class ProfessionalExp extends Component {
 	render() {
@@ -16,8 +16,8 @@ class ProfessionalExp extends Component {
 			}	
 			</Element>
 
-		)
+		);
 	}
 }
 
-export default ProfessionalExp
+export default ProfessionalExp;

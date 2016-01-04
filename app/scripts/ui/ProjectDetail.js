@@ -1,5 +1,5 @@
 import {Component} from "react";
-import Slider from '../Slider';
+import Slider from "../Slider";
 
 const sliderSettings = {
 	dots: true,
@@ -59,11 +59,11 @@ class ProjectDetail extends Component {
 					{links.map(function(link, key) {
 						return (
 							<div key={key}><strong>{link.name}: </strong><a href={link.url}>{link.url}</a></div>
-						)
+						);
 					})}
 				</div>
 			</div>
-		)
+		);
 	}
 }
 

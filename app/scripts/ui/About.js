@@ -1,5 +1,5 @@
 import React from "react";
-import {Element} from 'react-scroll'; 
+import {Element} from "react-scroll";
 
 class About extends React.Component {
 	render() {

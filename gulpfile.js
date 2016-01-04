@@ -119,7 +119,7 @@ gulp.task('clean', function(cb) {
 });
 
 // Bundle
-gulp.task('bundle', ['styles', 'scripts', 'bower'], function() {
+gulp.task('bundle', ['images', 'styles', 'scripts', 'bower'], function() {
     return gulp.src('./app/*.html')
         .pipe($.useref.assets())
         .pipe($.useref.restore())
@@ -195,12 +195,22 @@ gulp.task('watch', ['images', 'html', 'fonts', 'bundle'], function() {
 });
 
 // Build
-gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras'], function() {
+gulp.task('build', ['lint', 'html', 'buildBundle', 'images', 'fonts', 'extras'], function() {
     gulp.src('dist/scripts/app.js')
         .pipe($.uglify())
         .pipe($.stripDebug())
         .pipe(gulp.dest('dist/scripts'));
 });
+
+gulp.task('lint', function() {
+    return gulp.src('./app/scripts/**/*.js')
+      // This is available for modules like jshint-jsx, which
+      // expose the normal jshint function as JSHINT and the
+      // jsxhint function as JSXHINT
+        .pipe($.jshint({ linter: require('jshint-jsx').JSXHINT }))
+        .pipe($.jshint.reporter('jshint-stylish'))
+        .pipe($.jshint.reporter('fail'));
+  });
 
 // Default task
 gulp.task('default', ['clean', 'build'  ]);

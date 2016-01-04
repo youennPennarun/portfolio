@@ -1,7 +1,6 @@
 "use strict";
 import {Component} from "react";
 import MenuItem from "./MenuItem";
-import {Events} from "react-scroll";
 import LanguageSelection from "./LanguageSelection";
 import Translate from "../Translate";
 
@@ -17,18 +16,18 @@ class Menu extends Component {
 			underlineStyle: {
 				width: 0
 			}
-		}
+		};
 
 		this.translate = () => {
 			let menuItems = {
 				about: Translate.translate("menu.about"),
-				education: Translate.translate("menu.education"),
 				experience: Translate.translate("menu.experience"),
+				education: Translate.translate("menu.education"),
 				portfolio: Translate.translate("menu.portfolio"),
 				contact: Translate.translate("menu.contact"),
 			};
 			this.setState({menuItems});
-		}
+		};
 	}
 	overItem(elem) {
 		this.setState({
