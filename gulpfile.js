@@ -208,8 +208,8 @@ gulp.task('lint', function() {
       // expose the normal jshint function as JSHINT and the
       // jsxhint function as JSXHINT
         .pipe($.jshint({ linter: require('jshint-jsx').JSXHINT }))
-        .pipe($.jshint.reporter('jshint-stylish'))
-        .pipe($.jshint.reporter('fail'));
+        .pipe($.jshint.reporter('jshint-stylish'));
+        //.pipe($.jshint.reporter('fail'))
   });
 
 // Default task

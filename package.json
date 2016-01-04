@@ -2,7 +2,9 @@
   "name": "youenn-pennarun-portfolio",
   "version": "0.0.0",
   "dependencies": {
+    "express": "^4.13.3",
     "jshint-stylish": "^2.1.0",
+    "node-jsx": "^0.13.3",
     "react-scroll": "^0.35.0",
     "react-slick": "^0.9.3"
   },
@@ -39,7 +41,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "server": "node server/app.js",
+    "start": "gulp build; node server/app.js"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/preprocessor.js",

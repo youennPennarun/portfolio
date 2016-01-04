@@ -1,7 +1,6 @@
 
 var React = window.React = require("react"), //jshint ignore:line
-    ReactDOM = require("react-dom"),
-    mountNode = document.getElementById("app");
+    ReactDOM = require("react-dom");
 var Translate = require("./Translate");
 
 import Menu from "./ui/Menu";
@@ -52,5 +51,11 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, mountNode);
+if (typeof window !== "undefined") {
+  window.onload = function() {
+    "use strict";
+    ReactDOM.render(<App />, document.getElementById("app"));
+  };
+} else {
+}
 

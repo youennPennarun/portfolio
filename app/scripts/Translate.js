@@ -36,14 +36,14 @@ Translate.registerTranslations = function(key, data) {
 	if (!Translate.languages[key]) {
 		Translate.languages[key] = {};
 	}
-	var uL = (window.navigator.userLanguage || window.navigator.language);
-	if (uL) {
-		uL = uL.split("-")[0];
-		if (!Translate.languages[key]) {
-			uL = Translate.defaultLanguage;
+	var uL = Translate.defaultLanguage;
+	if (window.navigator && (window.navigator.userLanguage || window.navigator.language)) {
+		if (uL) {
+			uL = uL.split("-")[0];
+			if (!Translate.languages[key]) {
+				uL = Translate.defaultLanguage;
+			}
 		}
-	} else {
-		uL = Translate.defaultLanguage;
 	}
 	if (uL != Translate.selectedLanguage) {
 		Translate.selectedLanguage = uL;
