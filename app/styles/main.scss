@@ -27,7 +27,23 @@ hr {
     border: 0;
     border-top: 1px solid $divider_color;
 }
+h1 {
+    color: $primary_text;
+    &.main {     
+        font-size: 44px;
+        color: $primary_color;
+    }
+}
+p {
+    @media screen and (min-width: $break_small) {
+        font-size: 20px;
+    }
 
+    @media screen and (max-width: $break_small) {
+        font-size: 16px;
+    }
+    color: $secondary_text;
+}
 button {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -221,8 +237,8 @@ button {
                 color: white;
                 text-decoration: none;
                 margin-left: 10px;
-                font-size: 30px;
-                margin-bottom: 5px;
+                font-size: 20px;
+                margin-bottom: 15px;
                 width: 100%;
 
                 &:visited {
@@ -406,7 +422,7 @@ button {
     }
 }
 .block {
-    margin: 15px 30px 20px 30px;
+    margin: 15px 5% 20px 5%;
     padding: 15px 15px 15px 15px;
     background-color: #ffffff;
     border-radius: 2px;
@@ -416,17 +432,7 @@ button {
     &:hover {
       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
-    h1 {
-        color: $primary_text;
-        &.main {
-            font-size: 44px;
-            color: $primary_color;
-        }
-    }
-    p {
-        font-size: 20px;
-        color: $secondary_text;
-    }
+    
 }
 
 .grid {
@@ -435,9 +441,6 @@ button {
     justify-content: space-around;
     flex-flow: row wrap;
 
-    @media screen and (max-width: $break_small) {
-        flex-direction: column;
-    }
     .block {
         flex: 1;
         &.no-padding {
@@ -496,11 +499,7 @@ button {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
-
-
-    @media screen and (max-width: $break_small) {
-        flex-direction: column;
-    }
+    flex-wrap: wrap;
 
     .item {
         display: flex;
@@ -588,18 +587,11 @@ button {
         }
     }
     .project-slider-container {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
 
         .slick-prev:before, .slick-next:before {
             color: $dark_primary_color;
-        }
-
-        .project-slider {
-            .slider-item{
-                img {     
-                }
-            }
         }
     }
 
@@ -607,7 +599,6 @@ button {
         margin-top: 25px;
         padding-left: 15px;
         padding-right: 15px;
-        font-size: 25px;
         text-align: center;
     }
 

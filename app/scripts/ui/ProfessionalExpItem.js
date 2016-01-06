@@ -15,7 +15,7 @@ class ProfessionalExpItem extends Component {
 		let {title, description, technos = [], location, start, end} = this.props;
 		return (
 			<div className="experience sub-block level-2">
-				<h1>{title}</h1>
+				<h2>{title}</h2>
 				<div className="info" >
 		        	<Translate component="p" content="experiences.info" location={location} start={start} end={end}/>
 		        </div>

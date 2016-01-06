@@ -8,7 +8,7 @@ class StudyItem extends Component {
     if (!content) content = [];
     return (
       <div className="sub-block level-2 study">
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <div className="info" >
             <Translate component="p" content="studies.info" location={location} start={start} end={end}/>
           </div>

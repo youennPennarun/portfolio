@@ -68,7 +68,7 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présent dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire a l'utilisateur.",
+			"description": "This is a personnal project still in an early stage. This application aim to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to.",
 		},
 		{
 			"name": "arduino light switcher",
