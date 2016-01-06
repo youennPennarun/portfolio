@@ -1,12 +1,12 @@
 "use strict";
 
 import {Component} from "react";
-import Translate from "../Translate"
+import Translate from "../Translate";
 import Logo from "./Logo";
 
 class Header extends Component {
   render() {
-    let {title, subtitle} = this.props;
+    let {title} = this.props;
     return (
         <div className="header">
           {/*<img className="cover" src={cover} />*/}

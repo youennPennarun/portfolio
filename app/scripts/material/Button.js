@@ -1,8 +1,5 @@
 import {Component} from "react";
 
-const bStyle = {
-
-}
 
 class Button extends Component {
 	
@@ -13,7 +10,7 @@ class Button extends Component {
 		}
 		return (
 			<div>
-				<button disabled={(disabled == true || disabled == "disabled")} enabled style={bStyle}>{label}</button>
+				<button disabled={(disabled === true || disabled == "disabled")} onClick={onClick}>{label}</button>
 			</div>
 		);
 	}

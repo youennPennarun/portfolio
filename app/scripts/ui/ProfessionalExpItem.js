@@ -3,10 +3,18 @@ import {Component} from "react";
 import Translate from "../Translate";
 
 class ProfessionalExpItem extends Component {
-	render() {
-		let {title, description, location, start, end} = this.props;
+	renderTechno(tech) {
 		return (
-			<div id="experiences" className="sub-block level-2">
+			<div key={tech.name} className="item">
+				<img src={tech.img} />
+				<p>{tech.name}</p>
+			</div>
+		);
+	}
+	render() {
+		let {title, description, technos = [], location, start, end} = this.props;
+		return (
+			<div className="experience sub-block level-2">
 				<h1>{title}</h1>
 				<div className="info" >
 		        	<Translate component="p" content="experiences.info" location={location} start={start} end={end}/>
@@ -14,6 +22,11 @@ class ProfessionalExpItem extends Component {
 				<p>
 					{description}
 				</p>
+				<div className="technos">
+					{
+						technos.map(item => this.renderTechno(item))
+					}
+				</div>
 			</div>
 		);
 	}

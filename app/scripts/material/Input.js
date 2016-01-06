@@ -9,7 +9,7 @@ class Input extends Component {
 		}
 		return (
 			<div className="form-group">
-				<input value={value || ""} onChange={(event) => onChange(event.target.value)} required={(attrs.required === true)}/>
+				<input className={(value)? "dirty": ""} value={value || ""} onChange={(event) => onChange(event.target.value)} required={(attrs.required === true)}/>
 				<label>{label}</label>
 				<span className="bottom-bar"/>
 			</div>

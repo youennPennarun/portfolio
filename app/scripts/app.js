@@ -16,10 +16,26 @@ import Footer from "./ui/Footer";
 Translate.registerTranslations("en", require("../content/en/en.json"));
 Translate.registerTranslations("fr", require("../content/fr/fr.json"));
 
+var globalData = require("../content/global");
+
+var merge = function(dest, source) {
+  "use strict";
+  for (var k in source) {
+    if (!dest[k]) {
+      dest[k] = source[k];
+    } else {
+      if (typeof source[k] === "object") {
+        merge(dest[k], source[k])
+      }
+    }
+  }
+  return dest;
+}
 var data = {
-  "en": require("../content/en/data.json"),
-  "fr": require("../content/fr/data.json")
+  "en": merge(require("../content/en/data.json"), globalData),
+  "fr": merge(require("../content/fr/data.json"), globalData)
 };
+console.log(data);
 
 class App extends React.Component {
   constructor(props) {

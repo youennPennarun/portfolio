@@ -1,5 +1,6 @@
 "use strict";
 import {Component} from "react";
+import Translate from "../Translate";
 
 class Footer extends Component {
 	constructor(props) {
@@ -10,7 +11,7 @@ class Footer extends Component {
 		return (
 			<div id="footer" >
 				<div id="aroundWeb">
-					<h2>Around the Web</h2>
+					<Translate component="h2" content="footer.title" />
 					<div className="social-links">
 						<a href="https://github.com/youennPennarun/"><i className="socicon-github"></i></a>
 						<a href="https://twitter.com/YouennPennarun"><i className="socicon-twitter"></i></a>

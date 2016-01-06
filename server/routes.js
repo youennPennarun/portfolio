@@ -1,15 +1,28 @@
 var React = require('react'),
 ReactApp = React.createFactory(require('../dist/scripts/app'));
 
+var mailMiddleware = require("./mailMiddleware");
+
 module.exports = function(app) {
 
 	app.get('/', function(req, res){
-		// React.renderToString takes your component
-    	// and generates the markup
 		var reactHtml = React.renderToString(ReactApp({}));
-    	// Output html rendered by react
-		// console.log(myAppHtml);
     	res.render('index.html', {reactOutput: reactHtml});
+	});
+
+	app.post('/api/mail', function(req, res){
+		if (req.body.from && req.body.subject && req.body.content) {
+			mailMiddleware.send(req.body.from, req.body.subject, req.body.content, function(err) {
+				if (err) {
+					res.json({error: err});
+				} else {
+					res.json({status: "success"});
+				}
+			});
+		} else {
+			res.status = 400;
+			res.json({"error": "invalid request"});
+		}
 	});
 
 };

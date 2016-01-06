@@ -6,6 +6,7 @@ import ProjectItem from "./ProjectItem";
 class Projects extends Component {
 	render() {
 		let {projects} = this.props;
+		console.log(projects);
 		return (
 			<Element name="projects" id="projects">
 				<h1>Projects</h1>

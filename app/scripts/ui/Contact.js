@@ -1,10 +1,12 @@
 "use strict";
 import {Component} from "react";
-import {Element} from "react-scroll"; 
+import {Element} from "react-scroll";
+import Translate from "../Translate";
 
-import Input from "../material/Input"
-import TextArea from "../material/TextArea"
-import Button from "../material/Button"
+import Input from "../material/Input";
+import TextArea from "../material/TextArea";
+import Button from "../material/Button";
+import request from "superagent";
 
 class Contact extends Component {
 	constructor(props) {
@@ -14,6 +16,33 @@ class Contact extends Component {
 			email: "",
 			content: ""
 		};
+	}
+	sendMail(event) {
+		this.setState({sending: true});
+		event.preventDefault();
+		let {subject, email, content} = this.state;
+		if (this.isFormValid()) {
+			request
+			  .post('/api/mail')
+			  .send({ 
+			  	from: email,
+			  	subject,
+			  	content
+			  }).end((err, res) => {
+				this.setState({
+					sending: false,
+					subject: "",
+					email: "",
+					content: ""
+				});
+			  	// TODO
+			  	if (err) {
+			  		console.log(err);
+			  	} else {
+			  		console.log(res.body);
+			  	}
+			  });
+		}
 	}
 	isFormValid() {
 		let {subject, email, content} = this.state;
@@ -30,18 +59,18 @@ class Contact extends Component {
 		);
 	}
 	render() {
-		let {subject, email, content} = this.state;
+		let {subject, email, content, sending} = this.state;
 
 		return (
 			<Element id="contact" name="contact" className="block" >
-				<h1>Get in touch</h1>
-				<form>
+				<Translate component="h1" content="contact.title" />
+				<form action="#">
 					<Input label="email" value={email} onChange={(value) => this.setState({email: value})} required/>
 					<Input label="subject" value={subject} onChange={(value) => this.setState({subject: value})}/>
 
 					<TextArea label="content" value={content} onChange={(value) => this.setState({content: value})} />
 
-					<Button label="Send" disabled={!this.isFormValid()} />
+					<Button label="Send" disabled={!this.isFormValid() || sending} onClick={(event)=> this.sendMail(event)}/>
 				</form>
 				<br/>
 			</Element>

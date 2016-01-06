@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
 var path = require("path");
+var bodyParser = require('body-parser')
 
 var port = 8080;
 global.window = {};
 require('node-jsx').install();
-
+app.use( bodyParser.json() )
 app.use(express.static(path.join(__dirname, '../dist')));
 
 require("./routes")(app);

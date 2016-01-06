@@ -3,7 +3,9 @@ import {Component} from "react";
 class TextArea extends Component {
 	resize(event) {
 		let target = event.target;
-		target.style.height = (25+target.scrollHeight)+"px";
+		console.log(target, target.scrollHeight);
+		target.style.height = 0;
+		target.style.height = target.scrollHeight+"px";
 	}
 	render() {
 		let {label, value, onChange, ...attrs} = this.props;
@@ -12,7 +14,7 @@ class TextArea extends Component {
 		}
 		return (
 			<div className="form-group" style={{height: "auto"}}>
-				<textarea value={value} onChange={(event) => {this.resize(event); onChange(event.target.value)} } required={(attrs.required === true)} />
+				<textarea className={(value)? "dirty": ""} value={value} onChange={(event) => {this.resize(event); onChange(event.target.value);} } required={(attrs.required === true)} />
 				<label>{label}</label>
 				<span className="bottom-bar"/>
 			</div>

@@ -10,7 +10,7 @@ class MenuItem extends Component {
 		this.handleScroll = () => {
 			let {onMouseOver} = this.props;
 			if (this.domNode.classList.contains("active")) {
-				onMouseOver(this.domNode);
+				onMouseOver(this.domNode, true);
 			}
 		};
 	}
@@ -27,7 +27,7 @@ class MenuItem extends Component {
 		let {text, color, linkTo, current, onMouseOver} = this.props;
 
 		return (
-			<Link to={linkTo} className={(current == linkTo)? "item current": "item"} onMouseOver={onMouseOver}
+			<Link to={linkTo} className={(current == linkTo)? "item current": "item"} onMouseOver={event => onMouseOver(event.target)}
 				spy={true} smooth={true} offset={-55} duration={500}>
 				<div className="background" style={{backgroundColor: color}}></div>
 				<div className="itemText">{text}</div>

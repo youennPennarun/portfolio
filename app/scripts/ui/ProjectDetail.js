@@ -1,5 +1,6 @@
 import {Component} from "react";
 import Slider from "../Slider";
+import Translate from "../Translate";
 
 const sliderSettings = {
 	dots: true,
@@ -11,6 +12,23 @@ const sliderSettings = {
 };
 
 class ProjectDetail extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+
+		this.onKeyDown = (e) => {
+			let {closeDetails} = this.props;
+		    if(e.keyCode === 27) {
+		        closeDetails();
+		    }
+		}
+	}
+	componentDidMount() {
+		window.addEventListener("keydown", this.onKeyDown);
+	}
+	componentWillUnmount() {
+		window.removeEventListener("keydown", this.onKeyDown);
+	}
 	render() {
 		let {active,
 			closeDetails,
@@ -52,7 +70,8 @@ class ProjectDetail extends Component {
 				<hr/>
 				<br/>
 				<div className="technos">
-					<h2>Used technologies</h2>
+					<Translate component="h2" content="projects.usedTech" />
+					<h2></h2>
 					<strong>{technos.join(", ")}</strong>
 				</div>
 				<div className="links">

@@ -16,6 +16,16 @@
 	"experiences": {
 		"title": "Éxperiences professionnel",
 		"info": "{location} - de: {start} à: {end}"
+	},
+	"contact": {
+		"title": "Contact"
+	},
+	"projects": {
+		"usedTech": "Technologies utilisées"
+	},
+	"footer": {
+		"title": "Me retrouver sur internet"
 	}
+
 
 }

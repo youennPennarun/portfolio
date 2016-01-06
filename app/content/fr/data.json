@@ -11,7 +11,14 @@
 	"studies": [
 		{
 			"title": "M1 informatique option Génie Logiciel",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan.",
+			"description": "",
+			"content": [
+				"Compilation",
+				"Analyse et Conception Objet",
+				"Analyse et Conception Formelles",
+				"Mécanismes des Réseaux Informatiques",
+				"Méthodes Formelles pour le Développement de Logiciels Sûrs"
+			],
 			"location": "ISTIC, Rennes",
 			"start": "2015",
 			"end": "2016"
@@ -41,8 +48,11 @@
 	],
 	"professional_experiences": [
 		{
-			"title": "Node JS...",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, erat ut ultrices egestas, urna nulla dapibus tellus, eget molestie nisl ligula ac nisl. Vivamus at lectus ac nisi volutpat ullamcorper ut sit amet orci. Suspendisse potenti. Ut id lectus quis erat malesuada ornare non quis sem. Nullam non odio quis mauris sollicitudin tristique sit amet ac sem. Duis pulvinar, dui a aliquet vestibulum, tellus nulla mollis elit, at egestas turpis elit nec turpis. Nam id magna vel nisi faucibus mollis nec eget elit. Suspendisse pulvinar urna eu lobortis tincidunt. Proin consectetur bibendum accumsan."
+			"title": "Stagiaire développeur fullstack javascript",
+			"location": "AcommeAssure - Brest",
+			"start": "27 avril",
+			"end": "24 août 2015",
+			"description": "Développement d'une application de customer relationship management destinée à être utilisée en interne. J'ai aussi réalisé l'API de l'espace personnel des clients de l'entreprise ainsi qu'un webservice pour une entreprise partenaire."
 		},
 		{
 			"title": "Stage de développement web en Irlande",
@@ -55,42 +65,12 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"cover": "/images/hapi/alarms.png",
 			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présent dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire a l'utilisateur.",
 			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"],
-			"links": [
-				{"name": "server", "url": "to do"}
-			],
-			"images": [
-				"/images/hapi/new-alarm.png",
-				"/images/hapi/player.png"
-			]
 		},
 		{
 			"name": "arduino light switcher",
-			"cover": "/images/arduino-light/main screen.png",
-			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce a un serveur web et une carte Arduino",
-			"technos": ["NodeJs", "Socket.io", "MongoDB", "Java", "Arduino"],
-			"links": [
-				{
-					"name": "Server",
-					"url": "https://github.com/youennPennarun/Arduino_light_switcher_server"
-				},
-				{
-					"name": "Driver",
-					"url": "https://github.com/youennPennarun/Arduino_light_switcher_Driver"
-				},
-				{
-					"name": "Control panel",
-					"url": "https://github.com/youennPennarun/Arduino_light_switcher_Admin_app"
-				}
-			],
-			"images": [
-				"/images/arduino-light/HA_Splash.jpg",
-				"/images/arduino-light/light screen.PNG",
-				"/images/arduino-light/main screen.png",
-				"/images/arduino-light/weather.PNG"
-			]
+			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce a un serveur web et une carte Arduino"
 		}
 	]
 }
