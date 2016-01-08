@@ -32,11 +32,12 @@ gulp.task('moveCss',['clean'], function(){
 });
 
 gulp.task('sass', function() {
-    return $.rubySass('./app/styles', {
+    return gulp.src('./app/styles/**/*.scss')
+    .pipe($.sass({
             style: 'expanded',
             precision: 10,
-            loadPath: ["app/bower_components"]
-        })
+            includePaths: ["app/bower_components"]
+        }).on('error', $.sass.logError))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('dist/styles'))
         .pipe($.size());
@@ -208,8 +209,7 @@ gulp.task('lint', function() {
       // expose the normal jshint function as JSHINT and the
       // jsxhint function as JSXHINT
         .pipe($.jshint({ linter: require('jshint-jsx').JSXHINT }))
-        .pipe($.jshint.reporter('jshint-stylish'))
-        .pipe($.jshint.reporter('fail'));
+        .pipe($.jshint.reporter('jshint-stylish'));
   });
 
 // Default task
