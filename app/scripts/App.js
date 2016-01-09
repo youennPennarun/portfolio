@@ -32,7 +32,6 @@ var data = {
   "en": merge(require("../content/en/data.json"), globalData),
   "fr": merge(require("../content/fr/data.json"), globalData)
 };
-console.log(data);
 
 class App extends Component {
   constructor(props) {

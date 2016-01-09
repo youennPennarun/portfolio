@@ -1,5 +1,6 @@
 //require("babel-register")({experimental: true});
 //require('babel-core/register');
+require("babel-core/register")({});
 var express = require('express');
 var app = express();
 var path = require("path");

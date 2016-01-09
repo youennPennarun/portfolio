@@ -10,6 +10,7 @@ var $ = require('gulp-load-plugins')();
 var browserify = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream'),
+    babelify = require('babelify'),
 
     sourceFile = './app/scripts/app.js',
 
@@ -32,23 +33,22 @@ gulp.task('moveCss',['clean'], function(){
 });
 
 gulp.task('sass', function() {
-<<<<<<< HEAD
-    return gulp.src('./app/styles/*.scss')
-        .pipe($.sass({
-            style: 'expanded',
-            precision: 10
-        }))
-=======
     return gulp.src('./app/styles/**/*.scss')
     .pipe($.sass({
             style: 'expanded',
             precision: 10,
             includePaths: ["app/bower_components"]
         }).on('error', $.sass.logError))
->>>>>>> 464906d4de42f4631d997a07296dba994e28d532
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('dist/styles'))
         .pipe($.size());
+});
+gulp.task('bundleTest', function() {
+    return browserify("./app/scripts/App.js")
+        .transform('reactify', {stripTypes: true, es6: true})
+        .bundle()
+        .pipe(source("./app/scripts/App.js"))
+        .pipe(gulp.dest("dist/bundle.js"));
 });
 
 
@@ -88,9 +88,10 @@ gulp.task('buildScripts', function() {
 
 gulp.task('buildScriptsIsomorphic', function() {
     return browserify("./app/scripts/App")
+        .transform(babelify)
         .bundle()
-        .pipe(source("App.js"))
-        .pipe(gulp.dest('dist/scripts'));
+        .pipe(source("bundle.js"))
+        .pipe(gulp.dest('./dist'));
 });
 
 
@@ -149,10 +150,6 @@ gulp.task('buildBundle', ['styles', 'buildScripts', 'moveLibraries', 'bower'], f
         .pipe($.useref.restore())
         .pipe($.useref())
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('buildServer', ['styles', 'buildScripts', 'moveLibraries', 'bower'], function() {
-    return true;
 });
 
 // Move JS Files and Libraries
