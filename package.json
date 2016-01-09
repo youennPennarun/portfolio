@@ -63,7 +63,7 @@
   },
   "scripts": {
     "test": "jest",
-    "server": "babel-node server/app.js",
+    "server": "node server/app.js",
     "start": "gulp build; npm run server"
   },
   "jest": {
