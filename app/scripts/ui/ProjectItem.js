@@ -1,5 +1,5 @@
 "use strict";
-import {Component} from "react";
+import React, {Component} from "react";
 import ProjectDetail from "./ProjectDetail";
 
 class ProjectItem extends Component {

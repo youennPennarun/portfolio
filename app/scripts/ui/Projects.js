@@ -1,5 +1,5 @@
 "use strict";
-import {Component} from "react";
+import React, {Component} from "react";
 import {Element} from "react-scroll"; 
 import ProjectItem from "./ProjectItem";
 

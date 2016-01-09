@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import {Element} from "react-scroll";
 
 class About extends React.Component {

@@ -32,11 +32,11 @@ gulp.task('moveCss',['clean'], function(){
 });
 
 gulp.task('sass', function() {
-    return $.rubySass('./app/styles', {
+    return gulp.src('./app/styles/*.scss')
+        .pipe($.sass({
             style: 'expanded',
-            precision: 10,
-            loadPath: ["app/bower_components"]
-        })
+            precision: 10
+        }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('dist/styles'))
         .pipe($.size());
@@ -74,6 +74,13 @@ gulp.task('buildScripts', function() {
     return browserify(sourceFile)
         .bundle()
         .pipe(source(destFileName))
+        .pipe(gulp.dest('dist/scripts'));
+});
+
+gulp.task('buildScriptsIsomorphic', function() {
+    return browserify("./app/scripts/App")
+        .bundle()
+        .pipe(source("App.js"))
         .pipe(gulp.dest('dist/scripts'));
 });
 
@@ -133,6 +140,10 @@ gulp.task('buildBundle', ['styles', 'buildScripts', 'moveLibraries', 'bower'], f
         .pipe($.useref.restore())
         .pipe($.useref())
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('buildServer', ['styles', 'buildScripts', 'moveLibraries', 'bower'], function() {
+    return true;
 });
 
 // Move JS Files and Libraries
@@ -195,7 +206,7 @@ gulp.task('watch', ['images', 'html', 'fonts', 'bundle'], function() {
 });
 
 // Build
-gulp.task('build', ['lint', 'html', 'buildBundle', 'images', 'fonts', 'extras'], function() {
+gulp.task('build', ['html', 'buildBundle', 'images', 'fonts', 'extras'], function() {
     gulp.src('dist/scripts/app.js')
         .pipe($.uglify())
         .pipe($.stripDebug())

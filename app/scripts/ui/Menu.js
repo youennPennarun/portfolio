@@ -1,5 +1,5 @@
 "use strict";
-import {Component} from "react";
+import React, {Component} from "react";
 import MenuItem from "./MenuItem";
 import LanguageSelection from "./LanguageSelection";
 import Translate from "../Translate";

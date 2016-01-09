@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import Slider from "../Slider";
 import Translate from "../Translate";
 

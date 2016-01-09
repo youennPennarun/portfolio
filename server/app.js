@@ -1,13 +1,20 @@
+//require("babel-register")({experimental: true});
+//require('babel-core/register');
 var express = require('express');
 var app = express();
 var path = require("path");
+console.log(path.join(__dirname, '../dist/styles'));
+app.use("/styles", express.static(path.join(__dirname, '../dist/styles')));
+app.use("/scripts", express.static(path.join(__dirname, '../dist/scripts')));
+app.use("/images", express.static(path.join(__dirname, '../dist/images')));
+//app.use(express.static(path.join(__dirname, '../dist')));
 var bodyParser = require('body-parser')
-
+app.engine('html', require('ejs').renderFile);
 var port = 8080;
 global.window = {};
-require('node-jsx').install();
+//require('babel-register');
+//require('node-babel')();
 app.use( bodyParser.json() )
-app.use(express.static(path.join(__dirname, '../dist')));
 
 require("./routes")(app);
 

@@ -68,7 +68,7 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"description": "This is a personnal project still in an early stage. This application aim to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to.",
+			"description": "This is a personnal project still in an early stage. This application aim to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to."
 		},
 		{
 			"name": "arduino light switcher",

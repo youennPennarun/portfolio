@@ -1,13 +1,15 @@
-var React = require('react'),
-ReactApp = React.createFactory(require('../dist/scripts/app'));
-
+var ReactDOMServer = require('react-dom/server');
+var React = require("react");
+console.log(require('../dist/scripts/App').default);
+var ReactApp = React.createFactory(require('../app/scripts/App').default);
+console.log(ReactApp)
 var mailMiddleware = require("./mailMiddleware");
 
 module.exports = function(app) {
 
 	app.get('/', function(req, res){
-		var reactHtml = React.renderToString(ReactApp({}));
-    	res.render('index.html', {reactOutput: reactHtml});
+		var reactHtml = ReactDOMServer.renderToString(ReactApp());
+    	res.render('../dist/index.html', {reactOutput: reactHtml});
 	});
 
 	app.post('/api/mail', function(req, res){

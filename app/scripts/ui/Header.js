@@ -1,6 +1,5 @@
 "use strict";
-
-import {Component} from "react";
+import React, {Component} from "react";
 import Translate from "../Translate";
 import Logo from "./Logo";
 

@@ -1,5 +1,5 @@
 "use strict";
-import {Component} from "react";
+import React, {Component} from "react";
 import {Link} from "react-scroll";
 import ReactDOM from "react-dom";
 
