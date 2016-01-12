@@ -9,7 +9,7 @@ var reactHtml = ReactDOMServer.renderToString(ReactApp());
 module.exports = function(app) {
 
 	app.get('/', function(req, res){
-		
+		console.log(req.acceptsLanguages("fr", "en"));
     	res.render('../dist/index.html', {reactOutput: reactHtml});
 	});
 

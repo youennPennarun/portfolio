@@ -46,9 +46,10 @@ class ProjectDetail extends Component {
 			images.push(cover);
 		return (
 			<div className={(active)? "project-detail active": "project-detail"}>
-				<span className="close" onClick={closeDetails}>
-					
-				</span>
+				<div className="close-container" onClick={closeDetails}>
+					<span className="close">
+					</span>
+				</div>
 				<h1 className="name">
 					{name}
 				</h1>

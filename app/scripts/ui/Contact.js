@@ -8,6 +8,8 @@ import TextArea from "../material/TextArea";
 import Button from "../material/Button";
 import request from "superagent";
 
+var Dropzone = require('react-dropzone');
+
 class Contact extends Component {
 	constructor(props) {
 		super(props);
@@ -16,6 +18,10 @@ class Contact extends Component {
 			email: "",
 			content: ""
 		};
+
+	}
+	onDrop(files) {
+		console.log(files);
 	}
 	sendMail(event) {
 		this.setState({sending: true});
@@ -69,14 +75,14 @@ class Contact extends Component {
 					<Input label="subject" value={subject} onChange={(value) => this.setState({subject: value})}/>
 
 					<TextArea label="content" value={content} onChange={(value) => this.setState({content: value})} />
-
+					{/*
+					<Dropzone onDrop={files => this.onDrop(files)}>
+		              <div>Try dropping some files here, or click to select files to upload.</div>
+		            </Dropzone>
+		        	*/}
 					<Button label="Send" disabled={!this.isFormValid() || sending} onClick={(event)=> this.sendMail(event)}/>
 				</form>
 				<br/>
-				{/*
-				<a style={{fontSize: "20px"}} href="mailto:youenn.pennarun@gmail.com">youenn.pennarun@gmail.com</a>
-				<br />
-				*/}
 			</Element>
 		);
 	}

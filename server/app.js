@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 var path = require("path");
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
 console.log(path.join(__dirname, '../dist/styles'));
 app.use("/styles", express.static(path.join(__dirname, '../dist/styles')));
 app.use("/scripts", express.static(path.join(__dirname, '../dist/scripts')));
