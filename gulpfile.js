@@ -37,7 +37,7 @@ gulp.task('sass', function() {
     .pipe($.sass({
             style: 'expanded',
             precision: 10,
-            includePaths: ["app/bower_components"]
+            includePaths: []
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('dist/styles'))
@@ -120,11 +120,7 @@ gulp.task('images', function() {
 // Fonts
 gulp.task('fonts', function() {
     
-    return gulp.src(require('main-bower-files')({
-            filter: '**/*.{eot,svg,ttf,woff,woff2}'
-        }).concat([
-            'app/fonts/**/*'
-        ]))
+    return gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
     
 });
@@ -136,7 +132,7 @@ gulp.task('clean', function(cb) {
 });
 
 // Bundle
-gulp.task('bundle', ['images', 'styles', 'scripts', 'bower'], function() {
+gulp.task('bundle', ['images', 'styles', 'scripts'], function() {
     return gulp.src('./app/*.html')
         .pipe($.useref.assets())
         .pipe($.useref.restore())
@@ -144,7 +140,7 @@ gulp.task('bundle', ['images', 'styles', 'scripts', 'bower'], function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('buildBundle', ['styles', 'buildScripts', 'moveLibraries', 'bower'], function() {
+gulp.task('buildBundle', ['styles', 'buildScripts', 'moveLibraries'], function() {
     return gulp.src('./app/*.html')
         .pipe($.useref.assets())
         .pipe($.useref.restore())
@@ -161,14 +157,6 @@ gulp.task('moveLibraries',['clean'], function(){
 });
 
 
-// Bower helper
-gulp.task('bower', function() {
-    gulp.src('app/bower_components/**/*.js', {
-            base: 'app/bower_components'
-        })
-        .pipe(gulp.dest('dist/bower_components/'));
-
-});
 
 gulp.task('json', function() {
     gulp.src('app/scripts/json/**/*.json', {
