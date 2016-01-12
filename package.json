@@ -64,7 +64,8 @@
   "scripts": {
     "test": "jest",
     "server": "node server/app.js",
-    "start": "gulp build; npm run server"
+    "start": "gulp build; npm run server",
+    "forever": "forever start ./server/app.js >> ./logs.txt"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/preprocessor.js",

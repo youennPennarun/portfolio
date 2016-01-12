@@ -4,19 +4,19 @@
 			"technos": [
 				{
 					"name": "NodeJS",
-					"img": "http://dius.wordpress.dius.com.au/wp-content/uploads/sites/2/2015/06/NodeJS-Small-Blog-Feature-Image-.jpg"
+					"img": "/images/nodejs.jpg"
 				},
 				{
 					"name": "AngularJS",
-					"img": "https://d1xwtr0qwr70yv.cloudfront.net/assets/tech/angularjs-d9843478308663db6920611ae2353d81.svg"
+					"img": "/images/angularjs.svg"
 				},
 				{
 					"name": "MongoDB",
-					"img": "http://blog.fabianpiau.com/wp-content/uploads/2013/01/00048.png"
+					"img": "/images/mongodb.png"
 				},
 				{
 					"name": "Elastic",
-					"img": "https://www.elastic.co/static/img/elastic-logo-200.png"
+					"img": "/images/elastic.png"
 				}
 			]
 		},
@@ -24,11 +24,11 @@
 			"technos": [
 				{
 					"name": "PHP",
-					"img": "http://seeklogo.com/images/E/ElePHPant_-_Mascot_PHP-logo-4C78D1AC4E-seeklogo.com.gif"
+					"img": "/images/php.gif"
 				},
 				{
 					"name": "JQuery",
-					"img": "http://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2010/07/jquery-logo.jpg"
+					"img": "/images/jquery.jpg"
 				}
 			]
 		}
