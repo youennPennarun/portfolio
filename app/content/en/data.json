@@ -55,7 +55,7 @@
 			"location": "AcommeAssure - Brest",
 			"start": "27 april",
 			"end": "24 august 2015",
-			"description": "Development of a customer relationship management application. I also developed the customers area API and a webservice used by a AcommeAssure partner"
+			"description": "Development of a customer relationship management application. I also developed the customers area API and a webservice used by a AcommeAssure partner<br/><br/>Creation of an interface allowing the user to easily make automatic tasks. It uses a module based system, each module having its own task(getting data from MongoDB or Elastic, send a mail, export data in csv...). The task is made by stacking modules. For example, search every client who didn't send a document and send a reminder mail to each of them.<br/><br/>Dévelopment of data migration scripts<br/><br/>Dévelopment of unit tests with Mocha"
 		},
 		{
 			"title": "Internship in web development in irlande",

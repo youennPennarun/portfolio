@@ -20,14 +20,17 @@ class Translate extends Component {
 		Translate.removeListener(this.updateTranslation);
 	}
 	render() {
-		let {component, className} = this.props;
+		let {component, className, isHTML} = this.props;
 		if (!component) component = "p";
+		if (isHTML) {
+			return React.createElement(component, {className, dangerouslySetInnerHTML:{__html: this.state.translated}}, null);
+		}
 		return React.createElement(component, {className}, this.state.translated);
 		
 	}
 }
 
-Translate.defaultLanguage = "en";
+Translate.defaultLanguage = "fr";
 Translate.selectedLanguage = Translate.defaultLanguage;
 Translate.languages = {};
 Translate.listeners = [];

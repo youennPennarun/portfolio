@@ -52,7 +52,7 @@
 			"location": "AcommeAssure - Brest",
 			"start": "27 avril",
 			"end": "24 août 2015",
-			"description": "Développement d'une application de customer relationship management destinée à être utilisée en interne. J'ai aussi réalisé l'API de l'espace personnel des clients de l'entreprise ainsi qu'un webservice pour une entreprise partenaire."
+			"description": "Développement d'une application de customer relationship management destinée à être utilisée en interne. J'ai aussi réalisé l'API de l'espace personnel des clients de l'entreprise ainsi qu'un webservice pour une entreprise partenaire.<br/><br/>Développement d'une interface permettant aux administrateurs de réaliser des traitements automatiques facilement. Cette interface permet de programmer une séquence d'action (effectuer une recherche sur MongoDB ou Elastic, envoyer un mail, exporter des données au format csv...) afin qu'ils soient exécutés régulièrement.<br/><br/>Réalisation de scripts de migration de données et de traitements automatique.<br/><br/>Réalisation de tests unitaires avec Mocha."
 		},
 		{
 			"title": "Stage de développement web en Irlande",

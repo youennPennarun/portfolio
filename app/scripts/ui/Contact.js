@@ -73,6 +73,8 @@ class Contact extends Component {
 					<Button label="Send" disabled={!this.isFormValid() || sending} onClick={(event)=> this.sendMail(event)}/>
 				</form>
 				<br/>
+				<a style={{fontSize: "20px"}} href="mailto:youenn.pennarun@gmail.com">youenn.pennarun@gmail.com</a>
+				<br />
 			</Element>
 		);
 	}

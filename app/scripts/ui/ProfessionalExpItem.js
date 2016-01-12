@@ -17,10 +17,9 @@ class ProfessionalExpItem extends Component {
 			<div className="experience sub-block level-2">
 				<h2>{title}</h2>
 				<div className="info" >
-		        	<Translate component="p" content="experiences.info" location={location} start={start} end={end}/>
+		        	<Translate component="p" isHTML={true} content="experiences.info" location={location} start={start} end={end}/>
 		        </div>
-				<p>
-					{description}
+				<p dangerouslySetInnerHTML={{__html: description}}>
 				</p>
 				<div className="technos">
 					{
