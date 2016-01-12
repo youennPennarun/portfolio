@@ -65,12 +65,12 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présent dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire a l'utilisateur.",
+			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présents dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire à l'utilisateur.",
 			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"]
 		},
 		{
 			"name": "arduino light switcher",
-			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce a un serveur web et une carte Arduino"
+			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce à un serveur web et une carte Arduino"
 		}
 	]
 }

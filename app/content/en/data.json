@@ -6,7 +6,7 @@
 	},
 	"about": {
 		"title": "Hello there!",
-		"content": "Hi there, I'm Youenn Pennarun. I am a student in science computing specialized in application development. Autonomous, Curious and Self-educated, I'm always trying to improve my programming skills<br/>I am also a music lover"
+		"content": "Hi there, I'm Youenn Pennarun. I am a student in science computing, specialized in application development. Autonomous, Curious and Self-educated, I'm always trying to improve my programming skills<br/>I am also a music lover"
 	},
 	"studies": [
 		{
@@ -68,7 +68,7 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"description": "This is a personnal project still in an early stage. This application aim to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to."
+			"description": "This is a personal project still in an early stage. This application aims to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to."
 		},
 		{
 			"name": "arduino light switcher",
