@@ -39,8 +39,8 @@
 			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"],
 			"links": [
 				{
-					"name": "server",
-					"url": "to do"
+					"name": "repo",
+					"url": "https://github.com/homyPi/"
 				}
 			],
 			"images": [
