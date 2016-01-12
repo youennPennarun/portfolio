@@ -18,6 +18,8 @@ class Footer extends Component {
 						<a href="https://www.linkedin.com/pub/pennarun-youenn/6a/984/b6"><i className="socicon-linkedin"></i></a>
 						<a href="http://www.viadeo.com/fr/profile/pennarun.youenn"><i className="socicon-viadeo"></i></a>
 					</div>
+					<br />
+					<a style={{color: "white", fontSize: "20px", textDecoration: "none"}} href="mailto:youenn.pennarun@gmail.com">youenn.pennarun@gmail.com</a>
 				</div>
 				<div id="copyright">
 					Copyright © Youenn PENNARUN
