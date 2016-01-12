@@ -4,7 +4,7 @@
 			"technos": [
 				{
 					"name": "NodeJS",
-					"img": "/images/nodejs.jpg"
+					"img": "/images/nodejs.svg"
 				},
 				{
 					"name": "AngularJS",
@@ -16,7 +16,7 @@
 				},
 				{
 					"name": "Elastic",
-					"img": "/images/elastic.png"
+					"img": "/images/elastic.svg"
 				}
 			]
 		},
@@ -24,11 +24,11 @@
 			"technos": [
 				{
 					"name": "PHP",
-					"img": "/images/php.gif"
+					"img": "/images/php.svg"
 				},
 				{
 					"name": "JQuery",
-					"img": "/images/jquery.jpg"
+					"img": "/images/jquery.svg"
 				}
 			]
 		}
