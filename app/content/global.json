@@ -35,7 +35,7 @@
 	],
 	"projects": [
 		{
-			"cover": "/images/hapi/alarms.png",
+			"cover": "/images/hapi/homySearch.png",
 			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"],
 			"links": [
 				{
@@ -44,8 +44,9 @@
 				}
 			],
 			"images": [
-				"/images/hapi/new-alarm.PNG",
-				"/images/hapi/player.PNG"
+				"/images/hapi/alarms.png",
+				"/images/hapi/menu.png",
+				"/images/hapi/androidApp_searchMusic.png"
 			]
 		},
 		{
