@@ -29,8 +29,17 @@ class Translate extends Component {
 		
 	}
 }
-
-Translate.defaultLanguage = "fr";
+try {
+Translate.defaultLanguage = (navigator.language || navigator.userLanguage);
+} catch(e){}
+if (!Translate.defaultLanguage) {
+	Translate.defaultLanguage = "fr";
+} else {
+	var idx = Translate.defaultLanguage.indexOf("-");
+    if (idx>=0) {
+      Translate.defaultLanguage = Translate.defaultLanguage.substring(0,idx);
+    }
+}
 Translate.selectedLanguage = Translate.defaultLanguage;
 Translate.languages = {};
 Translate.listeners = [];
@@ -77,6 +86,7 @@ Translate.removeListener = function(fn) {
 };
 Translate.translate = function(key, values = {}) {
 	"use strict";
+	console.log("=============>", Translate.selectedLanguage);
 	var str = get(key);
 	if (!str) {
 		return "";
