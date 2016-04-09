@@ -16,19 +16,19 @@ $loaded_anim_duration: 3s;
 		#l1 {
 		    animation: l1 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 45px 45px;
 		    
 		}
 		#l2 {
 		    animation: l2 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 180px 45px;
 		    
 		}
 		#l3 {
 		    animation: l3 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 180px 180px;
 		    
 		}
 		#m1 {
@@ -46,7 +46,7 @@ $loaded_anim_duration: 3s;
 		#m3 {
 		    animation: m3 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 50% 300px;
 		    
 		}
 
@@ -54,19 +54,19 @@ $loaded_anim_duration: 3s;
 		#r1 {
 		    animation: r1 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 455px 45px;
 		    
 		}
 		#r2 {
 		    animation: r2 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 360px 45px;
 		    
 		}
 		#r3 {
 		    animation: r3 $loaded_anim_duration;
 		    animation-iteration-count: 1;
-		    transform-origin: 50% 50%;
+		    transform-origin: 270px 180px;
 		    
 		}
 	}
@@ -74,7 +74,7 @@ $loaded_anim_duration: 3s;
 
 @keyframes l1 {
 	0% {
-		transform: scale(0) translateX(60px) translateY(100px) rotateX(-45deg);
+		transform: scale(0.01) translateX(60px) translateY(100px) rotateX(-45deg);
 	}
 	25% {
 		transform: scale(0.25) translateX(10px) translateY(30px) rotateX(5deg) rotateY(180deg);
@@ -88,7 +88,7 @@ $loaded_anim_duration: 3s;
 }
 @keyframes l2 {
 	0% {
-		transform: scale(0) rotateX(50deg);
+		transform: scale(0.01) rotateX(50deg);
 	}
 	25% {
 		transform: scale(0.25) rotateX(5deg) rotateY(90deg);
@@ -135,7 +135,7 @@ $loaded_anim_duration: 3s;
 }
 @keyframes r1 {
 	0% {
-		transform: scale(0) translateX(60px) translateY(100px) rotateX(-45deg);
+		transform: scale(0.01) translateX(60px) translateY(100px) rotateX(-45deg);
 	}
 	25% {
 		transform: scale(0.25) translateX(10px) translateY(30px) rotateX(5deg) rotateY(180deg);
@@ -149,7 +149,7 @@ $loaded_anim_duration: 3s;
 }
 @keyframes r2 {
 	0% {
-		transform: scale(0) skewX(35deg) rotateX(50deg);
+		transform: scale(0.01) skewX(35deg) rotateX(50deg);
 	}
 	25% {
 		transform: scale(0.25) skewX(5deg) rotateX(5deg) rotateY(90deg);
