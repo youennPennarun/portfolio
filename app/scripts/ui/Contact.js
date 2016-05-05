@@ -16,7 +16,8 @@ class Contact extends Component {
 		this.state = {
 			subject: "",
 			email: "",
-			content: ""
+			content: "",
+            captchaResponse: null
 		};
 
 	}
@@ -26,20 +27,22 @@ class Contact extends Component {
 	sendMail(event) {
 		this.setState({sending: true});
 		event.preventDefault();
-		let {subject, email, content} = this.state;
+		let {subject, email, content, captchaResponse} = this.state;
 		if (this.isFormValid()) {
 			request
 			  .post('/api/mail')
-			  .send({ 
+			  .send({
 			  	from: email,
 			  	subject,
-			  	content
+			  	content,
+                captchaResponse
 			  }).end((err, res) => {
 				this.setState({
 					sending: false,
 					subject: "",
 					email: "",
-					content: ""
+					content: "",
+                    captchaResponse: null
 				});
 			  	// TODO
 			  	if (err) {
@@ -51,19 +54,31 @@ class Contact extends Component {
 		}
 	}
 	isFormValid() {
-		let {subject, email, content} = this.state;
+		let {subject, email, content, captchaResponse} = this.state;
 		let emailRe = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		console.log("valid?", (
 			subject !== "" &&
-			content !== "" && 
+			content !== "" &&
 			emailRe.test(email)
 		));
 		return (
 			subject !== "" &&
-			content !== "" && 
+			content !== "" &&
+            captchaResponse !== null &&
+            captchaResponse !== "" &&
 			emailRe.test(email)
 		);
 	}
+    recaptchaCallback(response) {
+        this.setState({captchaResponse: response});
+    }
+    componentDidMount() {
+        grecaptcha.render( 'mail-captcha', {
+          'sitekey' : '6Ld_LR8TAAAAALRDzkgvfgLQpC2uGRFaGJ1Np6nQ',  // required
+          'theme' : 'light',  // optional
+          'callback': response => this.recaptchaCallback(response)  // optional
+        });
+    }
 	render() {
 		let {subject, email, content, sending} = this.state;
 
@@ -80,6 +95,7 @@ class Contact extends Component {
 		              <div>Try dropping some files here, or click to select files to upload.</div>
 		            </Dropzone>
 		        	*/}
+                    <div id="mail-captcha" ></div>
 					<Button label="Send" disabled={!this.isFormValid() || sending} onClick={(event)=> this.sendMail(event)}/>
 				</form>
 				<br/>

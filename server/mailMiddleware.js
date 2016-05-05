@@ -1,26 +1,30 @@
-var superagent = require("superagent");
+var Mailgun = require('mailgun-js');
 var recepient = "youenn.pennarun@gmail.com";
 
 
 var send = function(from, subject, content, callback) {
-	var mail = {
-		"key": process.env.MANDRILL_KEY,
-		"message": {
-			"html": "<p>" + content + "</p>",
-			"text": content,
-			"subject": subject,
-			"from_email": from,
-			"from_name": from,
-			"to": [{
-				"email": "youenn.pennarun@gmail.com",
-				"name": "Youenn PENNARUN",
-				"type": "to"
-			}]
-		}
-	};
-	superagent.post("https://mandrillapp.com/api/1.0/messages/send.json")
-		.send(mail)
-		.end(callback);
+    var mailgun = new Mailgun({apiKey: process.env.MAILGUN_KEY, domain: "youenn.pennarun.com"});
+    var mail = {
+    //Specify email data
+      from: from,
+    //The email to contact
+      to: "youenn.pennarun@gmail.com",
+    //Subject and text data
+      subject: subject,
+      html: "<p>" + content + "</p>",
+      text: content
+    };
+	mailgun.messages().send(mail, function (err, body) {
+        console.log("======================");
+        console.log(err);
+        console.log("======================");
+        console.log(body);
+      if (err) {
+          console.log(err);
+          return callback({status: "error", error: err});
+      }
+      return callback(null, {status: "success"});
+    });
 };
 
 module.exports = {

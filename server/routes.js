@@ -7,6 +7,7 @@ console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 console.log(Translate);
 console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 var mailMiddleware = require("./mailMiddleware");
+var superagent = require("superagent");
 
 module.exports = function(app) {
 
@@ -28,13 +29,27 @@ console.log("lang = " + lang);
 	app.post('/api/mail', function(req, res){
 
 		if (req.body.from && req.body.subject && req.body.content) {
-			mailMiddleware.send(req.body.from, req.body.subject, req.body.content, function(err) {
-				if (err) {
-					res.json({error: err});
-				} else {
-					res.json({status: "success"});
-				}
-			});
+            var captchaResponse = req.body.captchaResponse;
+            if (!captchaResponse) {
+                return res.json({error: {code: 403, data: "invalid captcha"}});
+            }
+            superagent.post("https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.CAPTCHA_SECRET + "&response=" + captchaResponse)
+              .send({
+                  secret: process.env.CAPTCHA_SECRET,
+                  response: captchaResponse
+              })
+              .end(function(err, response) {
+                if (err || !response.body.success) {
+                    return res.json({error: {code: 403, data: "invalid captcha"}});
+                }
+    			mailMiddleware.send(req.body.from, req.body.subject, req.body.content, function(err) {
+    				if (err) {
+    					res.json({error: err});
+    				} else {
+    					res.json({status: "success"});
+    				}
+    			});
+            });
 		} else {
 			res.status = 400;
 			res.json({"error": "invalid request"});
