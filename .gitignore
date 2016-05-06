@@ -3,3 +3,6 @@
 .sass-cache/
 /bower_components/
 .editorconfig
+npm-debug.log
+*.logs
+gulp-cache

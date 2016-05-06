@@ -7,8 +7,7 @@ then
 	echo "starting portfolio"
         export PATH=/usr/local/bin:$PATH
 	gulp build
-        forever start --sourceDir $BASEDIR $BASEDIR/server/app.js >> $BASEDIR/lo
-gs.txt
+        forever start -o app.logs -e error.logs --sourceDir $BASEDIR $BASEDIR/server/app.js >> $BASEDIR/logs.txt
 else
 	echo "Already running"
 fi
