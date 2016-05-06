@@ -15,10 +15,6 @@ var send = function(from, subject, content, callback) {
       text: content
     };
 	mailgun.messages().send(mail, function (err, body) {
-        console.log("======================");
-        console.log(err);
-        console.log("======================");
-        console.log(body);
       if (err) {
           console.log(err);
           return callback({status: "error", error: err});

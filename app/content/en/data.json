@@ -2,7 +2,7 @@
 	"header": {
 		"cover": "http://youenn.pennarun.com/public/assets/img/logofinal.png",
 		"title": "Youenn PENNARUN",
-		"subtitle": "Etudiant en Licence 3 Ingénierie Informatique"
+		"subtitle": "Computer science student"
 	},
 	"about": {
 		"title": "Hello there!",
@@ -10,7 +10,7 @@
 	},
 	"studies": [
 		{
-			"title": "M1",
+			"title": "Master Degree",
 			"description": "",
 			"content": [
 				"Compilation",
