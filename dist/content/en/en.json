@@ -1,0 +1,30 @@
+{
+	"header": {
+		"subtitle": "Student in computer sciences"
+	},
+	"menu": {
+		"about": "About me",
+		"education": "Education",
+		"experience": "Experiences",
+		"portfolio": "Portfolio",
+		"contact": "contact"
+	},
+	"studies": {
+		"title": "Studies",
+		"info": "{location} - from: {start} to: {end}"
+	},
+	"experiences": {
+		"title": "Experiences",
+		"info": "{location} - from: {start} to: {end}"
+	},
+	"contact": {
+		"title": "Get in touch"
+	},
+	"projects": {
+		"usedTech": "Used technologies"
+	},
+	"footer": {
+		"title": "Around the Web"
+	}
+
+}
