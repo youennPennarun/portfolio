@@ -1,0 +1,76 @@
+{
+	"header": {
+		"cover": "http://youenn.pennarun.com/public/assets/img/logofinal.png",
+		"title": "Youenn PENNARUN",
+		"subtitle": "Etudiant en Licence 3 Ingénierie Informatique"
+	},
+	"about": {
+		"title": "Hello there!",
+		"content": "Bonjour, je suis Youenn Pennarun. Je suis étudiant en Licence 3 informatique option Ingénierie Informatique. Autonome, curieux et autodidacte, je cherche toujours à améliorer mes techniques de programmation<br/><br/>Je suis aussi un grand fan de musique de tout genre, du rock au jazz en passant par le hip-hop et la musique électronique."
+	},
+	"studies": [
+		{
+			"title": "M1 informatique option Génie Logiciel",
+			"description": "",
+			"content": [
+				"Compilation",
+				"Analyse et Conception Objet",
+				"Analyse et Conception Formelles",
+				"Mécanismes des Réseaux Informatiques",
+				"Méthodes Formelles pour le Développement de Logiciels Sûrs"
+			],
+			"location": "ISTIC, Rennes",
+			"start": "2015",
+			"end": "2016"
+		},
+		{
+			"title": "Licence 3 informatique option Ingénierie Informatique",
+			"description": "",
+			"content": ["Développement web", "Développement système et réseaux", "Mathématiques"],
+			"location": "Université de Bretagne Ouest, Brest",
+			"start": "2014",
+			"end": "2015"
+		},
+		{
+			"title": "DUT d'informatique",
+			"description": "",
+			"content": [
+				"Programmation web (PHP, SQL, HTML), Java, C",
+				"Gestion de projets",
+				"Économie et Gestion des Organisations",
+				"Outils et Modélisation du Génie Logiciel",
+				"Mathématiques"
+			],
+			"location": "IUT de Lannion",
+			"start": "2012",
+			"end": "2014"
+		}
+	],
+	"professional_experiences": [
+		{
+			"title": "Stagiaire développeur fullstack javascript",
+			"location": "AcommeAssure - Brest",
+			"start": "27 avril",
+			"end": "24 août 2015",
+			"description": "Développement d'une application de customer relationship management destinée à être utilisée en interne. J'ai aussi réalisé l'API de l'espace personnel des clients de l'entreprise ainsi qu'un webservice pour une entreprise partenaire."
+		},
+		{
+			"title": "Stage de développement web en Irlande",
+			"location": "Institut universitaire de Tralee - Irlande",
+			"start": "7 avril",
+			"end": "8 juin 2014",
+			"description": "Réalisation d'une application de gestion des publications départementales de l'université en PHP."
+		}
+	],
+	"projects": [
+		{
+			"name": "homyPi",
+			"description": "Ceci est un projet personnel en cours de développement. Cette application permet de programmer un réveil sur un Raspberry Pi. Les morceaux joués sont sélectionnés dans des playlists généré en fonction des artistes présent dans les playlists Spotify de l'utilisateur. Cela permet de se réveiller chaque matin avec une chanson différente ayant de forte chances de plaire a l'utilisateur.",
+			"technos": ["ReactJS", "React Native", "NodeJs", "Socket.io", "MongoDB", "Python", "Raspberry pi"]
+		},
+		{
+			"name": "arduino light switcher",
+			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce a un serveur web et une carte Arduino"
+		}
+	]
+}

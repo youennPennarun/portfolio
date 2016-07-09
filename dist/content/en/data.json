@@ -2,15 +2,15 @@
 	"header": {
 		"cover": "http://youenn.pennarun.com/public/assets/img/logofinal.png",
 		"title": "Youenn PENNARUN",
-		"subtitle": "Computer science student"
+		"subtitle": "Etudiant en Licence 3 Ingénierie Informatique"
 	},
 	"about": {
 		"title": "Hello there!",
-		"content": "Hi there, I'm Youenn Pennarun. I am a student in science computing, specialized in application development. Autonomous, Curious and Self-educated, I'm always trying to improve my programming skills<br/>I am also a music lover"
+		"content": "Hi there, I'm Youenn Pennarun. I am a student in science computing specialized in application development. Autonomous, Curious and Self-educated, I'm always trying to improve my programming skills<br/>I am also a music lover"
 	},
 	"studies": [
 		{
-			"title": "Master Degree",
+			"title": "M1",
 			"description": "",
 			"content": [
 				"Compilation",
@@ -51,11 +51,11 @@
 	],
 	"professional_experiences": [
 		{
-			"title": "Intern as a fullstack javascript developer",
+			"title": "Intern as a fullstack javascript déveloper",
 			"location": "AcommeAssure - Brest",
 			"start": "27 april",
 			"end": "24 august 2015",
-			"description": "Development of a customer relationship management application. I also developed the customers area API and a webservice used by a AcommeAssure partner<br/><br/>Creation of an interface allowing the user to easily make automatic tasks. It uses a module based system, each module having its own task(getting data from MongoDB or Elastic, send a mail, export data in csv...). The task is made by stacking modules. For example, search every client who didn't send a document and send a reminder mail to each of them.<br/><br/>Dévelopment of data migration scripts<br/><br/>Dévelopment of unit tests with Mocha"
+			"description": "Development of a customer relationship management application. I also developed an API for the customers' area and a webservice for a partner of AcommeAssure"
 		},
 		{
 			"title": "Internship in web development in irlande",
@@ -68,7 +68,7 @@
 	"projects": [
 		{
 			"name": "homyPi",
-			"description": "This is a personal project still in an early stage. This application aims to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to."
+			"description": "This is a personnal project still in an early stage. This application aim to be a modulable home automation application on a RaspberryPi. For now, the application can be used as a music player and a connected alarm clock which will play random tracks related to what the user listen to."
 		},
 		{
 			"name": "arduino light switcher",
