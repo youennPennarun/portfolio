@@ -48,6 +48,13 @@
 	],
 	"professional_experiences": [
 		{
+			"title": "Stagiaire développeur React native",
+			"location": "Swadmap - Rennes",
+			"start": "9 mai",
+			"end": "29 juillet 2016",
+			"description": "Développement d'une application React native et de modules Android"
+		},
+		{
 			"title": "Stagiaire développeur fullstack javascript",
 			"location": "AcommeAssure - Brest",
 			"start": "27 avril",

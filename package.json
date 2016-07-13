@@ -16,6 +16,7 @@
     "json-loader": "^0.5.4",
     "jsx-loader": "^0.13.2",
     "mailgun-js": "^0.7.10",
+    "object-assign": "^4.1.0",
     "react": "latest",
     "react-dom": "latest",
     "react-dropzone": "^3.3.2",

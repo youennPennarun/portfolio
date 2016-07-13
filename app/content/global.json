@@ -1,5 +1,21 @@
 {
 	"professional_experiences": [
+    {
+			"technos": [
+				{
+					"name": "React native",
+					"img": "/images/react.svg"
+				},
+				{
+					"name": "Android",
+					"img": "/images/android.svg"
+				},
+				{
+					"name": "NodeJS",
+					"img": "/images/nodejs.svg"
+				}
+			]
+		},
 		{
 			"technos": [
 				{
