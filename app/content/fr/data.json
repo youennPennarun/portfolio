@@ -79,5 +79,19 @@
 			"name": "arduino light switcher",
 			"description": "Cette application a été réalisée dans le cadre du projet tuteuré de Licence 3. Le but était de pouvoir allumer une lampe à distance grâce à un serveur web et une carte Arduino"
 		}
+	],
+	"knowledge": [
+		{
+			"category": "Dévelopement web"
+		},
+		{
+			"category": "Dévelopement NoSQL"
+		},
+		{
+			"category": "Dévelopement Mobile"
+		},
+		{
+			"category": "Orienté Objet"
+		}
 	]
 }

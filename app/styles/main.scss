@@ -1,18 +1,18 @@
 @import "animations";
 @import "fonts.scss";
 
-$background_white: #f5f5f5;
+@import "constants.scss";
 
-$dark_primary_color: #512DA8;
-$primary_color: #673AB7;
-$light_primary_color: #D1C4E9;
-$divider_color: #B6B6B6;
+* {
+	-webkit-print-color-adjust: exact;
+    //-webkit-filter:opacity(1);
+    text-rendering: geometricPrecision;
+    //font-smooth: never;
+    //-webkit-font-smoothing: none;
 
-$primary_text: #212121;
-$secondary_text: #727272;
+    font-family: 'Roboto';
 
-$break_small: 800px;
-$menu_break_small: 800px;
+}
 
 body,html {
     padding: 0;
@@ -20,7 +20,7 @@ body,html {
     height: 100%;
     min-height: 100%;
     background-color: $background_white;
-    font-family: 'Roboto', sans-serif;
+    //font-family: 'Roboto', sans-serif;
 }
 
 hr {
@@ -693,3 +693,9 @@ button {
     }
 }
 
+#knowledge {
+    display: none;
+}
+
+
+@import "print.scss";

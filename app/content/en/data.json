@@ -81,5 +81,19 @@
 			"name": "arduino light switcher",
 			"description": "This project is my Bachelor Degree project. The project goal was to turn on and off a light remotely with and Arduino card for the hardware and a web server"
 		}
+	],
+	"knowledge": [
+		{
+			"category": "Web development"
+		},
+		{
+			"category": "NoSQL development"
+		},
+		{
+			"category": "Mobile development"
+		},
+		{
+			"category": "Object-oriented programming"
+		}
 	]
 }

@@ -3,9 +3,6 @@ var React = require("react");
 import App from '../app/scripts/App';
 var ReactApp = React.createFactory(App);
 import Translate from "../app/scripts/Translate";
-console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-console.log(Translate);
-console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 var mailMiddleware = require("./mailMiddleware");
 var superagent = require("superagent");
 
@@ -13,7 +10,6 @@ module.exports = function(app) {
 
 	app.get('/', function(req, res){
 		let lang = req.acceptsLanguages("fr", "en");
-console.log("lang = " + lang);
 		if (lang) {
 			try {
 				Translate.switchLanguage(lang);
@@ -22,7 +18,11 @@ console.log("lang = " + lang);
 				console.log(e);
 			}
 		}
+		if (req.query.print) {
+			window.matchMedia = function () {return {matches: true}};
+		}
 		var reactHtml = ReactDOMServer.renderToString(ReactApp());
+		delete window.matchMedia;
     	res.render('../dist/index.html', {reactOutput: reactHtml});
 	});
 

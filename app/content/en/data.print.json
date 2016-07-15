@@ -1,0 +1,40 @@
+{
+
+	"studies": [
+        {
+            "$$content": [
+				"Compilation",
+				"Object-oriented analysis",
+				"Formal concept analysis",
+				"Network Mechanisms",
+				"Formal methods for the development of safe application"
+			]
+        },
+        {
+            "$$content": [
+				"Web development",
+				"System and network programming",
+				"Mathematics"
+			]
+        },
+        {
+            "$$content": [
+				"Web development(PHP, SQL, HTML), Java, C",
+				"Project management",
+				"Economy and organizations management",
+				"Tools and software engineering modeling"
+			]
+        }
+    ],
+    "professional_experiences": [
+		{
+			"description": "Development of an Android and IOS application aimed to facilitate the access to the sharing economy<br>- Android native modules in Java<br>- Unit tests with AWS device farm in JAVA<br/>- API in NodeJS and ElasticSearch<br/>- Involvement in reflexions related to the technical stack"
+		},
+        {
+			"description": "Development of a customer relationship management application<br/>- Customers area API with NodeJS<br/>- Unit tests with Mocha"
+		},
+        {
+			"description": "-Development of a departmental publications management web application in PHP et Javascript"
+		}
+    ]
+}

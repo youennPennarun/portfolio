@@ -3,7 +3,6 @@ import React, {Component} from "react";
 class TextArea extends Component {
 	resize(event) {
 		let target = event.target;
-		console.log(target, target.scrollHeight);
 		target.style.height = 0;
 		target.style.height = target.scrollHeight+"px";
 	}

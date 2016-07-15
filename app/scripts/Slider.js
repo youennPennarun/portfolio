@@ -59,7 +59,6 @@ class Slider extends Component {
 		};
 
 		this.next = () => {
-			console.log(this.state.current, "<", this.props.children.length -1);
 			if (this.props.children &&
 				this.state.current < this.props.children.length -1) {
 				this.setState({current: ++this.state.current});

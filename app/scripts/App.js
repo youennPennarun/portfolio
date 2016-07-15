@@ -6,6 +6,7 @@ import Header from "./ui/Header";
 import About from "./ui/About";
 import Studies from "./ui/Studies";
 import ProfessionalExp from "./ui/ProfessionalExp";
+import Knowledge from "./ui/Knowledge";
 import Projects from "./ui/Projects";
 import Contact from "./ui/Contact";
 import Footer from "./ui/Footer";
@@ -18,6 +19,11 @@ var globalData = require("../content/global");
 var merge = function(dest, source) {
   "use strict";
   for (var k in source) {
+    if (dest["$$" + k]) {
+      dest[k] = dest["$$" + k];
+      delete dest["$$" + k];
+      continue;
+    }
     if (!dest[k]) {
       dest[k] = source[k];
     } else {
@@ -32,11 +38,24 @@ var data = {
   "en": merge(require("../content/en/data.json"), globalData),
   "fr": merge(require("../content/fr/data.json"), globalData)
 };
+var dataPrint = {
+  "en": merge(require("../content/en/data.print.json"), data.en),
+  "fr": merge(require("../content/fr/data.print.json"), data.fr)
+};
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {content: data[Translate.selectedLanguage]};
+    let dataSource;
+    if ((window.matchMedia && window.matchMedia('print').matches)) {
+      dataSource = dataPrint
+    } else {
+      dataSource = data;
+    }
+    this.state = {
+      content: dataSource[Translate.selectedLanguage],
+      isMediaPrint: window.matchMedia && window.matchMedia('print').matches,
+    };
   }
   componentDidMount() {
     Translate.addListener(()=> {
@@ -44,20 +63,46 @@ class App extends Component {
         content: data[Translate.selectedLanguage]
       });
     });
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(mql => {
+          let nextState = {isMediaPrint: mql.matches};
+          if (mql.matches) {
+            nextState.content = dataPrint[Translate.selectedLanguage]
+          } else {
+            nextState.content = data[Translate.selectedLanguage]
+          }
+          console.log(nextState);
+            this.setState(nextState)
+        });
+    }
   }
 
   render() {
-    let {content} = this.state;
+    let {content, isMediaPrint} = this.state;
     return (
       <div>
         <Menu />
-        <Header {...content.header} />
+        <Header {...content.header} isMediaPrint={isMediaPrint} />
         <About about={content.about}/>
-        <ProfessionalExp experiences={content.professional_experiences} />
-        <Studies studies={content.studies} />
-        <Projects projects={content.projects}/>
-        <Contact />
-        <Footer />
+        <div id="resume">
+          <div id="resume-left">
+            <ProfessionalExp experiences={content.professional_experiences} />
+            <Studies studies={content.studies} />
+          </div>
+          {isMediaPrint && (
+            <div id="resume-right">
+              <Knowledge knowledge={content.knowledge} />
+            </div>
+          )}
+        </div>
+        {!isMediaPrint && (
+          <div>
+            <Projects projects={content.projects}/>
+            <Contact />
+            <Footer />
+          </div>
+        )}
       </div>
     );
   }

@@ -89,5 +89,33 @@
 				"/images/arduino-light/weather.PNG"
 			]
 		}
+	],
+	"knowledge": [
+		{
+			"items": [
+				"NodeJS/socket.io",
+				"ReactJS, AngularJS 1",
+				"SASS, CSS",
+				"Javascript (ES6)"
+			]
+		},
+		{
+			"items": [
+				"MongoDB",
+				"Elastic Search"
+			]
+		},
+		{
+			"items": [
+				"React Native",
+				"Android"
+			]
+		},
+		{
+			"items": [
+				"Java",
+				"Python"
+			]
+		}
 	]
 }

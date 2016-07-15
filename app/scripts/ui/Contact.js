@@ -22,7 +22,6 @@ class Contact extends Component {
 
 	}
 	onDrop(files) {
-		console.log(files);
 	}
 	sendMail(event) {
 		this.setState({sending: true});
@@ -48,7 +47,6 @@ class Contact extends Component {
 			  	if (err) {
 			  		console.log(err);
 			  	} else {
-			  		console.log(res.body);
 			  	}
 			  });
 		}
@@ -56,11 +54,7 @@ class Contact extends Component {
 	isFormValid() {
 		let {subject, email, content, captchaResponse} = this.state;
 		let emailRe = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		console.log("valid?", (
-			subject !== "" &&
-			content !== "" &&
-			emailRe.test(email)
-		));
+		
 		return (
 			subject !== "" &&
 			content !== "" &&

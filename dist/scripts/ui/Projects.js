@@ -7,7 +7,6 @@ import Translate from "../Translate";
 class Projects extends Component {
 	render() {
 		let {projects} = this.props;
-		console.log(projects);
 		return (
 			<Element name="projects" id="projects">
 				<Translate component="h1" content="projects.title" />

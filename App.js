@@ -77,7 +77,6 @@ var data = {
   "en": merge(require("../content/en/data.json"), globalData),
   "fr": merge(require("../content/fr/data.json"), globalData)
 };
-console.log(data);
 
 var App = function (_Component) {
   _inherits(App, _Component);
