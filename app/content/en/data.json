@@ -55,7 +55,7 @@
 			"location": "Swadmap - Rennes",
 			"start": "9 may",
 			"end": "29 July 2016",
-			"description": "Development of an Android and IOS  React Native application aimed to facilitate access to the sharing economy. I also developed Android native modules.<br/>I used AWS device farm and cucumber to create integration tests on Android, and Mocha to make unit tests of components and redux's actions and reducers.<br/><br/>I also developed and API with nodeJS and ElasticSearch."
+			"description": "Development of an Android and IOS  React Native application aimed to facilitate access to the sharing economy. I also developed Android native modules.<br/>I used AWS device farm and cucumber to create integration tests on Android, Mocha to make unit tests of components, redux's actions and reducers.<br/><br/>I also developed and API with nodeJS and ElasticSearch."
 		},
 		{
 			"title": "Intern as a fullstack javascript developer",
