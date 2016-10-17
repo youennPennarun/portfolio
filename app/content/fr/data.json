@@ -10,7 +10,21 @@
 	},
 	"studies": [
 		{
-			"title": "M1 informatique option Génie Logiciel",
+			"title": "Master 2 informatique",
+			"description": "",
+			"content": [
+				"Projet informatique",
+				"Intelligence artificielle",
+				"Architecture logicielle",
+				"Agile & dévelopement orienté composant avec .Net",
+				"Dévelopement web et mobile"
+			],
+			"location": "Queen's university, Belfast, Northern Ireland",
+			"start": "2016",
+			"end": "2017"
+		},
+		{
+			"title": "Master 1 informatique option Génie Logiciel",
 			"description": "",
 			"content": [
 				"Compilation",
