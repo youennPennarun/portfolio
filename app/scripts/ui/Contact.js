@@ -17,8 +17,8 @@ class Contact extends Component {
 			subject: "",
 			email: "",
 			content: "",
-            captchaResponse: null,
-			sendMailSuccess: true,
+			captchaResponse: null,
+			sendMailSuccess: null,
 		};
 
 	}
@@ -36,14 +36,14 @@ class Contact extends Component {
 			  	from: email,
 			  	subject,
 			  	content,
-                captchaResponse
+				captchaResponse
 			  }).end((err, res) => {
 				this.setState({
 					sending: false,
 					subject: "",
 					email: "",
 					content: "",
-                    captchaResponse: null,
+					captchaResponse: null,
 					sendMailSuccess: !err,
 				});
 			  });
@@ -56,21 +56,21 @@ class Contact extends Component {
 		return (
 			subject !== "" &&
 			content !== "" &&
-            captchaResponse !== null &&
-            captchaResponse !== "" &&
+			captchaResponse !== null &&
+			captchaResponse !== "" &&
 			emailRe.test(email)
 		);
 	}
-    recaptchaCallback(response) {
-        this.setState({captchaResponse: response});
-    }
-    componentDidMount() {
-        grecaptcha.render( 'mail-captcha', {
-          'sitekey' : '6Ld_LR8TAAAAALRDzkgvfgLQpC2uGRFaGJ1Np6nQ',  // required
-          'theme' : 'light',  // optional
-          'callback': response => this.recaptchaCallback(response)  // optional
-        });
-    }
+	recaptchaCallback(response) {
+		this.setState({captchaResponse: response});
+	}
+	componentDidMount() {
+		grecaptcha.render( 'mail-captcha', {
+		  'sitekey' : '6Ld_LR8TAAAAALRDzkgvfgLQpC2uGRFaGJ1Np6nQ',  // required
+		  'theme' : 'light',  // optional
+		  'callback': response => this.recaptchaCallback(response)  // optional
+		});
+	}
 	renderSendMailStatus() {
 		if (this.state.sendMailSuccess === null) return null;
 		if (this.state.sendMailSuccess) {
@@ -93,10 +93,10 @@ class Contact extends Component {
 					<TextArea label="content" value={content} onChange={(value) => this.setState({content: value})} />
 					{/*
 					<Dropzone onDrop={files => this.onDrop(files)}>
-		              <div>Try dropping some files here, or click to select files to upload.</div>
-		            </Dropzone>
-		        	*/}
-                    <div id="mail-captcha" ></div>
+					  <div>Try dropping some files here, or click to select files to upload.</div>
+					</Dropzone>
+					*/}
+					<div id="mail-captcha" ></div>
 					<Button label="Send" disabled={!this.isFormValid() || sending} onClick={(event)=> this.sendMail(event)}/>
 				</form>
 				<br/>
