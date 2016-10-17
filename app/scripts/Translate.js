@@ -85,7 +85,6 @@ Translate.removeListener = function(fn) {
 		Translate.listeners.splice(i, 1);
 };
 Translate.translate = function(key, values = {}) {
-	"use strict";
 	var str = get(key);
 	if (!str) {
 		return "";
