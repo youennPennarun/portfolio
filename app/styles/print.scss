@@ -2,9 +2,13 @@
 
 
 
-@media print {
     @page {
-    margin: 0cm;
+        margin: 0cm;
+        size: A4;
+    }
+    html, body {
+        width: 210mm;
+        height: 297mm;
     }
     .header {
         margin: 0;
@@ -20,8 +24,8 @@
             margin: 0;
             margin-left: 5px;
             float: left;
-            width: 15%;
-            height: 90%;
+            width: 150px;
+            height: 150px;
         }
         .presentation {
             width: 40%;
@@ -43,7 +47,7 @@
             }
             margin-bottom: 10px;
             margin-left: auto;
-            margin-right: 10px;
+            margin-right: 5px;
         }
     }
     h1 {
@@ -132,6 +136,5 @@
     }
 
     #top-menu, #about, #projects, #contact, #footer, .technos {
-        display: none;
+        display: none !important;
     }
-}
