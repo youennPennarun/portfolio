@@ -5,6 +5,19 @@ var express = require('express');
 var app = express();
 var path = require("path");
 
+function printInRed(message) {
+    const redTag = "\x1b[31m";
+    const whiteTag = "\x1b[37m";
+    console.log(`${redTag}${message}${whiteTag}`);
+}
+
+if (!process.env.MAILGUN_KEY) {
+    printInRed("Missing mailgun api key");
+}
+if (!process.env.CAPTCHA_SECRET) {
+    printInRed("Missing repatcha api key");
+}
+
 app.set('port', (process.env.PORT || 8080));
 console.log(path.join(__dirname, '../dist/styles'));
 app.use("/styles", express.static(path.join(__dirname, '../dist/styles')));
