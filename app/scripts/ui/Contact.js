@@ -17,7 +17,8 @@ class Contact extends Component {
 			subject: "",
 			email: "",
 			content: "",
-            captchaResponse: null
+            captchaResponse: null,
+			sendMailSuccess: true,
 		};
 
 	}
@@ -28,6 +29,7 @@ class Contact extends Component {
 		event.preventDefault();
 		let {subject, email, content, captchaResponse} = this.state;
 		if (this.isFormValid()) {
+			this.setState({sendMailSuccess: null});
 			request
 			  .post('/api/mail')
 			  .send({
@@ -41,13 +43,9 @@ class Contact extends Component {
 					subject: "",
 					email: "",
 					content: "",
-                    captchaResponse: null
+                    captchaResponse: null,
+					sendMailSuccess: !err,
 				});
-			  	// TODO
-			  	if (err) {
-			  		console.log(err);
-			  	} else {
-			  	}
 			  });
 		}
 	}
@@ -73,12 +71,21 @@ class Contact extends Component {
           'callback': response => this.recaptchaCallback(response)  // optional
         });
     }
+	renderSendMailStatus() {
+		if (this.state.sendMailSuccess === null) return null;
+		if (this.state.sendMailSuccess) {
+			return (<div className="status success">Thanks, I'll get back to you as soon as possible</div>);
+		} else {
+			return (<div className="status error">Sorry, there's been an error</div>);
+		}
+	}
 	render() {
 		let {subject, email, content, sending} = this.state;
 
 		return (
 			<Element id="contact" name="contact" className="block" >
 				<Translate component="h1" content="contact.title" />
+				{this.renderSendMailStatus()}
 				<form action="#">
 					<Input label="email" value={email} onChange={(value) => this.setState({email: value})} required/>
 					<Input label="subject" value={subject} onChange={(value) => this.setState({subject: value})}/>

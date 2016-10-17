@@ -23,7 +23,9 @@ module.exports = function(app) {
 		}
 		var reactHtml = ReactDOMServer.renderToString(ReactApp());
 		delete window.matchMedia;
-    	res.render('../dist/index.html', {reactOutput: reactHtml});
+
+		const indexFile = (req.query.print) ? '../dist/index.print.html' : '../dist/index.html';
+    	res.render(indexFile, {reactOutput: reactHtml});
 	});
 
 	app.post('/api/mail', function(req, res){
@@ -31,7 +33,7 @@ module.exports = function(app) {
 		if (req.body.from && req.body.subject && req.body.content) {
             var captchaResponse = req.body.captchaResponse;
             if (!captchaResponse) {
-                return res.json({error: {code: 403, data: "invalid captcha"}});
+                    return res.status(500).json({error: "invalid captcha"});
             }
             superagent.post("https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.CAPTCHA_SECRET + "&response=" + captchaResponse)
               .send({
@@ -40,11 +42,12 @@ module.exports = function(app) {
               })
               .end(function(err, response) {
                 if (err || !response.body.success) {
-                    return res.json({error: {code: 403, data: "invalid captcha"}});
+                    return res.status(500).json({error: "invalid captcha"});
                 }
     			mailMiddleware.send(req.body.from, req.body.subject, req.body.content, function(err) {
     				if (err) {
-    					res.json({error: err});
+
+    					res.status(500).res.json({error: err});
     				} else {
     					res.json({status: "success"});
     				}

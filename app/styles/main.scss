@@ -627,6 +627,22 @@ button {
     }
 }
 #contact {
+    .status {
+        margin-top: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 4px;
+        color: white;
+
+        &.success {
+            background-color: #4CAF50;
+        }
+        &.error {
+            background-color: #D32F2F;
+        }
+    }
     form {
         margin-left: 5%;
         margin-right: 5%;
