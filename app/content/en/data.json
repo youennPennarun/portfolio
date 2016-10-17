@@ -13,13 +13,27 @@
 			"title": "Master Degree",
 			"description": "",
 			"content": [
+				"Computer Science Project:  Spatial Crowdsourced Answering System",
+				"Artificial Intelligence",
+				"Software Design Principles and Patterns",
+				"Agile & Component Based Development using .NET",
+				"Web and Mobile Application Development"
+			],
+			"location": "Queen's university, Belfast, Northern Ireland",
+			"start": "2016",
+			"end": "2017"
+		},
+		{
+			"title": "First year Master Degree",
+			"description": "",
+			"content": [
 				"Compilation",
 				"Object-oriented analysis",
 				"Formal concept analysis",
 				"Network Mechanisms",
 				"Formal methods for the development of safe application"
 			],
-			"location": "ISTIC, Rennes",
+			"location": "ISTIC, Rennes, France",
 			"start": "2015",
 			"end": "2016"
 		},
@@ -31,7 +45,7 @@
 				"System and networks programming",
 				"Economics and Law",
 				"Mathematics"],
-			"location": "Université de Bretagne Ouest, Brest",
+			"location": "Université de Bretagne Ouest, Brest, France",
 			"start": "2014",
 			"end": "2015"
 		},
@@ -44,7 +58,7 @@
 				"Economy and organizations management",
 				"Tools and Software Engineering Modeling"
 			],
-			"location": "IUT de Lannion",
+			"location": "IUT de Lannion, France",
 			"start": "2012",
 			"end": "2014"
 		}
@@ -52,17 +66,17 @@
 	"professional_experiences": [
 		{
 			"title": "Intern as a React native developer",
-			"location": "Swadmap - Rennes",
+			"location": "Swadmap - Rennes, France",
 			"start": "9 may",
 			"end": "29 July 2016",
-			"description": "Development of an Android and IOS  React Native application aimed to facilitate access to the sharing economy. I also developed Android native modules.<br/>I used AWS device farm and cucumber to create integration tests on Android, Mocha to make unit tests of components, redux's actions and reducers.<br/><br/>I also developed and API with nodeJS and ElasticSearch."
+			"description": "Development of an Android and IOS application aimed to ease the access to the sharing economy with React Native and Android native modules.<br/>I used Appium and Wd to create integration tests on Android, Mocha to make unit tests of components, redux's actions and reducers.<br/><br/>I also developed and API with NodeJS and ElasticSearch."
 		},
 		{
 			"title": "Intern as a fullstack javascript developer",
-			"location": "AcommeAssure - Brest",
+			"location": "AcommeAssure - Brest, France",
 			"start": "27 april",
 			"end": "24 august 2015",
-			"description": "Development of a customer relationship management application. I also developed the customers area API and a webservice used by a AcommeAssure partner<br/><br/>Creation of an interface allowing the user to easily make automatic tasks. It uses a module based system, each module having its own task(getting data from MongoDB or Elastic, send a mail, export data in csv...). The task is made by stacking modules. For example, search every client who didn't send a document and send a reminder mail to each of them.<br/><br/>Development of data migration scripts<br/><br/>Development of unit tests with Mocha"
+			"description": "Development of a customer relationship management application. I also developed the customers area API and a webservice used by a AcommeAssure partner<br/><br/>Creation of an interface allowing the user to easily make automatic tasks. It uses a module based system, each module having its own task(getting data from MongoDB or Elastic, send a mail, export data in csv...). The task is created by stacking modules. For example, search every client who didn't send a document and send a reminder mail to each of them.<br/><br/>Development of data migration scripts<br/><br/>Development of unit tests with Mocha"
 		},
 		{
 			"title": "Internship in web development in ireland",
