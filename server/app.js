@@ -19,7 +19,8 @@ if (!process.env.CAPTCHA_SECRET) {
 }
 
 app.set('port', (process.env.PORT || 8080));
-console.log(path.join(__dirname, '../dist/styles'));
+
+app.use("/favicon.ico", express.static(path.join(__dirname, '../dist/favicon.ico')));
 app.use("/styles", express.static(path.join(__dirname, '../dist/styles')));
 app.use("/scripts", express.static(path.join(__dirname, '../dist/scripts')));
 app.use("/images", express.static(path.join(__dirname, '../dist/images')));
@@ -35,6 +36,7 @@ app.use( bodyParser.json() )
 require("./routes")(app);
 
 app.get('*', function(req, res) {
+    res.status(404);
     res.json({
         'route': 'Sorry this page does not exist!'
     });
