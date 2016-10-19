@@ -33,7 +33,7 @@ try {
 Translate.defaultLanguage = (navigator.language || navigator.userLanguage);
 } catch(e){}
 if (!Translate.defaultLanguage) {
-	Translate.defaultLanguage = "fr";
+	Translate.defaultLanguage = "en";
 } else {
 	var idx = Translate.defaultLanguage.indexOf("-");
     if (idx>=0) {
