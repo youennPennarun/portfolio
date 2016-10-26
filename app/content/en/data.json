@@ -69,7 +69,7 @@
 			"location": "Swadmap - Rennes, France",
 			"start": "9 may",
 			"end": "29 July 2016",
-			"description": "Development of an Android and IOS application aimed to ease the access to the sharing economy with React Native and Android native modules.<br/>I used Appium and WD.js to create integration tests on Android, Mocha to make unit tests of components, redux's actions and reducers.<br/><br/>I also developed and API with NodeJS and ElasticSearch."
+			"description": "Development of an Android and IOS application using React Native aimed to ease the access to the sharing economy and I developed Android native modules.<br/>I used Appium and WD.js to create integration tests on Android and Mocha to test the components, redux's actions and reducers.<br/><br/>I also developed an API with NodeJS and ElasticSearch."
 		},
 		{
 			"title": "Intern as a fullstack javascript developer",
