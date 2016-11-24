@@ -33,7 +33,7 @@ try {
 Translate.defaultLanguage = (navigator.language || navigator.userLanguage);
 } catch(e){}
 if (!Translate.defaultLanguage) {
-	Translate.defaultLanguage = "fr";
+	Translate.defaultLanguage = "en";
 } else {
 	var idx = Translate.defaultLanguage.indexOf("-");
     if (idx>=0) {
@@ -85,7 +85,6 @@ Translate.removeListener = function(fn) {
 		Translate.listeners.splice(i, 1);
 };
 Translate.translate = function(key, values = {}) {
-	"use strict";
 	var str = get(key);
 	if (!str) {
 		return "";

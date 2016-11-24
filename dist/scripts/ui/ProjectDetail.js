@@ -72,7 +72,6 @@ class ProjectDetail extends Component {
 				<br/>
 				<div className="technos">
 					<Translate component="h2" content="projects.usedTech" />
-					<h2></h2>
 					<strong>{technos.join(", ")}</strong>
 				</div>
 				<div className="links">

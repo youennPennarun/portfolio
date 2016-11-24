@@ -5,14 +5,14 @@ import Logo from "./Logo";
 
 if (typeof Image !== 'undefined') {
   var my_image = new Image();
-  my_image.src = 'https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-breed-landing-hero.ashx';
+  my_image.src = 'https://s.gravatar.com/avatar/de43bd2cbcfaa0a5a333289f9a664c51?s=180';
 }
 
 function getPrintableHeader(props) {
     let {title} = props;
   return (
         <div className="header">
-          <img className="my-pic" src="https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-breed-landing-hero.ashx" /> 
+          <img className="my-pic" src="https://s.gravatar.com/avatar/de43bd2cbcfaa0a5a333289f9a664c51?s=180" /> 
           <div className="presentation">
             <h1>{title}</h1>
             <h2>subtitle</h2>

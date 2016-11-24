@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import Translate from "../Translate";
 
 class ProfessionalExpItem extends Component {
-	renderTechno(tech) {
+	_renderTechno(tech) {
 		return (
 			<div key={tech.name} className="item">
 				<img src={tech.img} />
@@ -11,8 +11,15 @@ class ProfessionalExpItem extends Component {
 			</div>
 		);
 	}
+	_renderImage(image) {
+		return (
+			<div class="imageContainer" >
+				<img src={image} />
+			</div>
+		)
+	}
 	render() {
-		let {title, description, technos = [], location, start, end} = this.props;
+		let {title, description, images = [], technos = [], location, start, end} = this.props;
 		return (
 			<div className="experience sub-block level-2">
 				<h2>{title}</h2>
@@ -21,9 +28,14 @@ class ProfessionalExpItem extends Component {
 		        </div>
 				<p dangerouslySetInnerHTML={{__html: description}}>
 				</p>
+				<div className="images">
+					{
+						images.map(image => this._renderImage(image))
+					}
+				</div>
 				<div className="technos">
 					{
-						technos.map(item => this.renderTechno(item))
+						technos.map(item => this._renderTechno(item))
 					}
 				</div>
 			</div>

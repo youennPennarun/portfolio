@@ -499,6 +499,19 @@ button {
             font-weight: 100;
         }
     }
+    .images {
+        display: flex;
+        flex-flow: row wrap;
+
+        & > * {
+            flex: auto;
+            width: 150px;
+        }
+        & > * img {
+            width: 90%;
+            height: auto;
+        }
+    }
     .technos {
         display: flex;
         align-self: center;
@@ -508,6 +521,7 @@ button {
         margin-left: auto;
         margin-right: auto;
         flex-wrap: wrap;
+        margin-top: 25px;
 
         .item {
             display: flex;

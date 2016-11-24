@@ -18,6 +18,13 @@
 					"name": "Elastic",
 					"img": "/images/elastic.svg"
 				}
+			],
+			"images": [
+				"/images/swadmap/Swadmap02.png",
+				"/images/swadmap/Swadmap03.png",
+				"/images/swadmap/Swadmap04.png",
+				"/images/swadmap/Swadmap05.png",
+				"/images/swadmap/Swadmap06.png"
 			]
 		},
 		{
