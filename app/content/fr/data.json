@@ -62,6 +62,20 @@
 	],
 	"professional_experiences": [
 		{
+			"title": "Développeur React native en freelance - Modelhouz",
+			"location": "Modelhouz",
+			"start": "14 décembre 2016",
+			"end": "19 décembre 2017",
+			"description": "Développement d'une application permettant aux mannequins de réaliser leur showcase."
+		},
+		{
+			"title": "Développeur React native en freelance - Gowu",
+			"location": "GoWu",
+			"start": "11 novembre 2016",
+			"end": "23 janvier 2017",
+			"description": "Développement d'une application d'achat immobilier"
+		},
+		{
 			"title": "Stagiaire développeur React native",
 			"location": "Swadmap - Rennes",
 			"start": "9 mai",

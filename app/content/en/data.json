@@ -65,10 +65,24 @@
 	],
 	"professional_experiences": [
 		{
+			"title": "React native remote freelancer - Modelhouz",
+			"location": "Modelhouz",
+			"start": "14 december 2016",
+			"end": "19 december 2017",
+			"description": "Development of an application allowing models to create their showcase"
+		},
+		{
+			"title": "React native remote freelancer - Gowu",
+			"location": "GoWu",
+			"start": "11 november 2016",
+			"end": "23 january 2017",
+			"description": "Worked on a real estate application"
+		},
+		{
 			"title": "Intern as a React native developer",
 			"location": "Swadmap - Rennes, France",
 			"start": "9 may",
-			"end": "29 July 2016",
+			"end": "29 july 2016",
 			"description": "Development of an Android and IOS application using React Native aimed to ease the access to the sharing economy and I developed Android native modules.<br/>I used Appium and WD.js to create integration tests on Android and Mocha to test the components, redux's actions and reducers.<br/><br/>I also developed an API with NodeJS and ElasticSearch."
 		},
 		{

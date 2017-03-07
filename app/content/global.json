@@ -1,5 +1,46 @@
 {
 	"professional_experiences": [
+		{
+			"technos": [
+				{
+					"name": "React native",
+					"img": "/images/react.svg"
+				},
+				{
+					"name": "Android",
+					"img": "/images/android.svg"
+				}
+			],
+			"images": [
+				"/images/modelhouz/home.jpg",
+				"/images/modelhouz/login_filled.jpg",
+				"/images/modelhouz/account_type.jpg",
+				"/images/modelhouz/registration_view1.jpg",
+				"/images/modelhouz/registration_view2.jpg",
+				"/images/modelhouz/registration_view3.jpg",
+				"/images/modelhouz/registration_view4.jpg",
+				"/images/modelhouz/welcome.jpg"
+			]
+		},
+		{
+			"technos": [
+				{
+					"name": "React native",
+					"img": "/images/react.svg"
+				},
+				{
+					"name": "Android",
+					"img": "/images/android.svg"
+				}
+			],
+			"images": [
+				"/images/gowu/properties.png",
+				"/images/gowu/property_detail1.png",
+				"/images/gowu/property_detail2.png",
+				"/images/gowu/referals.png",
+				"/images/gowu/invite.png"
+			]
+		},
     {
 			"technos": [
 				{

@@ -78,7 +78,7 @@ class Slider extends Component {
 	}
 	renderDot(key) {
 		return (
-			<svg style={{cursor: "pointer"}} width={styles.dotContainer.width} height={styles.dotContainer.height} onClick={() => this.setState({current: key})}>
+			<svg key={key} style={{cursor: "pointer"}} width={styles.dotContainer.width} height={styles.dotContainer.height} onClick={() => this.setState({current: key})}>
   				<circle 
   				  cx={styles.dotContainer.width/2}
   				  cy={styles.dotContainer.height/2} 
@@ -102,8 +102,7 @@ class Slider extends Component {
 						} 
 					  xmlns="http://www.w3.org/2000/svg" 
 					  width="60px" height="80px" 
-					  viewBox="0 0 50 80" 
-					  space="preserve"
+					  viewBox="0 0 50 80"
 					  onClick={this.previous}
 					  onMouseEnter={() => this.setState({leftHover: true})}
 					  onMouseLeave={() => this.setState({leftHover: false})}>
@@ -119,7 +118,7 @@ class Slider extends Component {
 									style = Object.assign({}, styles.child);
 								}
 								return (
-									<div className="slide-item" style={style}>
+									<div key={key} className="slide-item" style={style}>
 										{c}
 									</div>
 								);
@@ -134,8 +133,7 @@ class Slider extends Component {
 						} 
 					  xmlns="http://www.w3.org/2000/svg" 
 					  width="60px" height="80px" 
-					  viewBox="0 0 50 80" 
-					  space="preserve"
+					  viewBox="0 0 50 80"
 					  onClick={this.next}
 					  onMouseEnter={() => this.setState({rightHover: true})}
 					  onMouseLeave={() => this.setState({rightHover: false})}>

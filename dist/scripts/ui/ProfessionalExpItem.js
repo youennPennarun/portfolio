@@ -11,9 +11,9 @@ class ProfessionalExpItem extends Component {
 			</div>
 		);
 	}
-	_renderImage(image) {
+	_renderImage(image, key) {
 		return (
-			<div class="imageContainer" >
+			<div key={key} className="imageContainer" >
 				<img src={image} />
 			</div>
 		)
@@ -30,7 +30,7 @@ class ProfessionalExpItem extends Component {
 				</p>
 				<div className="images">
 					{
-						images.map(image => this._renderImage(image))
+						images.map((image, key) => this._renderImage(image, key))
 					}
 				</div>
 				<div className="technos">
